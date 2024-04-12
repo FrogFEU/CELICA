@@ -1,0 +1,13 @@
+
+    ALIGN 4
+    EarthTSA:
+    #incbin "dmp/Earth_tsa.dmp"
+
+    ALIGN 4
+    EarthImage:
+    #incbin "dmp/Earth_img.dmp"
+
+    ALIGN 4
+    EarthPalette:
+    #incext Png2Dmp --palette-only "Earth.png"
+    

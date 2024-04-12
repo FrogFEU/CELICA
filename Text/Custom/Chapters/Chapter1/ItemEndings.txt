@@ -1,0 +1,105 @@
+## EndingIronMemory
+All towns boast massive forges, and iron is[N]
+more common than trees.[A][X]
+
+## EndingSteelMemory
+Steel monuments can be found all over[N]
+the world, piercing the skies.[A][X]
+
+## EndingSilverMemory
+Silver jewellery is commonplace, worn by[N]
+all who can afford it.[A][X]
+
+## EndingRangedMemory
+Metallic wagons are used for transport,[N]
+and no place is out of reach.[A][X]
+
+## EndingKillingMemory
+Killers roam the street, killing without[n]
+remorse using their killing axes.[A][X]
+
+## EndingRoyalMemory
+Blue-haired princes can be found everywhere,[N]
+slaying fell dragons every Tuesday.[A][X]
+
+## EndingBlessedMemory
+All water in the world is holy, giving everyone[N]
+protection from monsters and vampires.[A][X]
+
+## EndingBrokenMemory
+Even the sturdiest tools turn to rust within[N]
+days, and people are as brittle as sticks.[A][X]
+
+
+
+## EndingLordCore
+All royals are well-versed in the arts of[N]
+magic, and none can oppose them.[A][X]
+
+## EndingVillagerCore
+Villages crop out of thin air everywhere,[N]
+and towns lay empty and desolate.[A][X]
+
+## EndingSoldierCore
+Hundreds of soldiers fight in massive wars,[N]
+achieving absolutely nothing.[A][X]
+
+## EndingKnightCore
+Honourable knights fight in glorious duels,[N]
+until one decides to bring a hammer.[A][X]
+
+## EndingFighterCore
+Fighters barge into bars unannounced, punch[N]
+someone in the face, then leave.[A][X]
+
+## EndingMyrmCore
+Long haired swordmasters clad in black brood[N]
+in dark and dreary towns.[A][X]
+
+## EndingMercCore
+Young people offer their blades for pocket[N]
+money, and end up saving the world.[A][X]
+
+## EndingArcherCore
+After years of research, a pair of archers[N]
+manages to create short-range bows.[A][X]
+
+## EndingCavCore
+Horses are more numerous than humans,[N]
+driving the apple population to extinction.[A][X]
+
+## EndingPegCore
+Winged horses soar in the skies, until people[N]
+mount and crush them beneath their weight.[A][X]
+
+## EndingWyvCore
+Soldiers mounted on flying wyverns terrorize[N]
+all who dare oppose them.[A][X]
+
+## EndingClericCore
+Travelling clerics wander the lands, offering[N]
+help and support to all.[A][X]
+
+## EndingMageCore
+Mages build majestic universities, only to[N]
+torture any who dare enter them.[A][X]
+
+## EndingMonkCore
+Travelling monks wander the lands, offering[N]
+help and support to all.[A][X]
+
+## EndingShamanCore
+Evil cults slither in the dark, coming up[N]
+with nefarious plans which always fail.[A][X]
+
+## EndingPaladinCore
+Paladins lecture any who make a mistake[N]
+in their vicinity, to everyone's chagrin.[A][X]
+
+## EndingGeneralCore
+Invincible generals choke points at every[N]
+opportunity.[A][X]
+
+## EndingZombieCore
+And then suddenly zombies arrive and[N]
+kill everyone.[4.] The end.[A][X]

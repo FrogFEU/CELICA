@@ -1,0 +1,20 @@
+#define NewLuckCap 20
+
+PUSH
+ORG 0x0872AE
+BYTE NewLuckCap
+ORG 0x02C016 
+BYTE NewLuckCap
+ORG 0x02C01C
+BYTE NewLuckCap
+ORG 0x018250
+BYTE NewLuckCap
+ORG 0x018254 
+BYTE NewLuckCap
+ORG 0x0926FC  
+BYTE NewLuckCap
+ORG 0x09C154   
+BYTE NewLuckCap
+ORG 0x09C31C   
+BYTE NewLuckCap
+POP

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="27" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="30" nextobjectid="1">
+ <properties>
+  <property name="Main" value=""/>
+ </properties>
+ <tileset firstgid="1" name="Village2" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="Village2.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="27" height="20">
+  <properties>
+   <property name="Anims1" value="5"/>
+   <property name="Anims2" value="0"/>
+   <property name="ChapterID" value="0"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="6"/>
+   <property name="MapID" value="4"/>
+   <property name="ObjectType" value="1"/>
+   <property name="PaletteID" value="2"/>
+   <property name="TileConfig" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxllT1rVEEUhmdmTQRRsNHKzkRSKGhtGzvxD/hZJE3QHyB+rq6CktiYFCl3TYyJpjKBiNVdXEPWgCBivzfqQiR2Gkvfw7yHOXNTPMzcuXPP9zm3cM61yQQYAT0+j5l3wnEwBGZr8bnHO6PcCyVY9M51wQRYBwvglc9lXgAFaFV0FJXnNehqGpt0le9mwFVwDVwEl8EVMO/TvSbXOZ9k18E/2nMkOLeC/VGsz2vxedUn/erTTXAP3Ae3wB1wF4z7GJc271k/ekZPmzZeor0SQ/W/MHGR/RvGTeMnbIMbRlZpbFf71bc2bbxNeyWGJe0pyK6Pd3vUt01++XTX+qRrE+9f+DxHwrKuIcqf80lf3aW4Wtkt1lTJPD0BHfAFfAabRv4kvl0CUz5+J9/shBTnwu31UeMjetWet7R9BxzGfgCxeRQi81wbYD/Ozxk/NV91I79k3qxOa4/W9mvqsvX6MuQ1O276Y5Y1L/I32T8L9L+6XzKoPf1Kvf4Iec12TD+uQNcMffvoU40ec3k/rfu8fjUui2AY776bs+u83+X6yfSexnHDpxo9W7Gt6/P6VbnayyXrawPrB+p7Cvpg2ad+nzV+dQ2nQqw7uXMyJDu7PvXPFs4fsx6kFk7gbMTvrTfJ8Ve8f8+cbZieFQ6FqEdm5MGQx0X9qtbCsMtnr9g0DfnfwJ9a7ld17tk82RyW5GelFkTXFN8V9GW1FnUOhairpK5qDdk82RxW5/gWOOMjB+j3NH2xPbFGvyQnfc6jPnOre3su66hPNaEzSnzYBc8g5y/1PKj0hOqq0nJ5H2tcZO41fD5jp02sTnPG2H/AiM9rXv9BdVNfUlvDLs0VnUdWjuZkjPZIf0+aGNfNfirsnUMdnA1gHTTnPT4Pmp7SnMj+ITjv4pz87fIYN1mf72rR3kZIM3Qf/VFfC5dmmej8DwaKVuo=
+  </data>
+ </layer>
+ <layer id="5" name="House1Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AU0APIArEcEMvTwS5bILYDYns62DUKRsEoGAXEAAAeMwEV
+  </data>
+ </layer>
+ <layer id="4" name="House1Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDEegMNAOGAWjYBSMAiQAAJrwACE=
+  </data>
+ </layer>
+ <layer id="6" name="House2Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDASQBWI5IJang122QGwHxPZ0sGsUjIJRMAqwAQAM8wEV
+  </data>
+ </layer>
+ <layer id="7" name="House2Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjATgMNAOGAWjYBSMaAAAKX8AQQ==
+  </data>
+ </layer>
+ <layer id="8" name="House3Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMJBAFojlgFieDnbZArEdENvTwa5RMAqQAQDX1gEV
+  </data>
+ </layer>
+ <layer id="9" name="House3Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMJKAw0A7YBSMSAAApnAAQQ==
+  </data>
+ </layer>
+ <layer id="10" name="House4Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF9AKyQCwHxPJ0sMsWiO2A2J4Odo2CUTAKRsEoGAWEAABGUQEV
+  </data>
+ </layer>
+ <layer id="11" name="House4Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFwxVUDbQDRsEoGAWjYBSMAigAACslAHs=
+  </data>
+ </layer>
+ <layer id="12" name="House5Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAroD2SBWA6I5elgly0Q2wGxPR3sGgXYAQDMZwEV
+  </data>
+ </layer>
+ <layer id="13" name="House5Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAqGP1AYaAeMcAAAOHAAIQ==
+  </data>
+ </layer>
+ <layer id="16" name="House6Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgeQBaI5YBYng522QKxHRDb08GuUTAKRsEoGAWjYDgAAPchARU=
+  </data>
+ </layer>
+ <layer id="17" name="House6Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF5ACHgXbAKBgFo2AUjIJRMIQAANZ/AEE=
+  </data>
+ </layer>
+ <layer id="14" name="House7Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBi6QBaI5YBYng522QKxHRDb08GuUTAKRsEoGAWjYLgBAAQgARU=
+  </data>
+ </layer>
+ <layer id="15" name="House7Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFxAKFgXbAKBgFo2AUjIJRMEQBAPDwACE=
+  </data>
+ </layer>
+ <layer id="20" name="House8Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjAJUIAHEckAsTwe7LIDYDojt6WDXKBgFo2DgAAA7YAEL
+  </data>
+ </layer>
+ <layer id="21" name="House8Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKBBQ4D7YBRMApGAc0BAAJ/AEE=
+  </data>
+ </layer>
+ <layer id="18" name="House9Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjAIIkAViOSCWpINdtkBsB8SWdLBrFIyCUTDwAAA7vAEJ
+  </data>
+ </layer>
+ <layer id="19" name="House9Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKBAVUD7YBRMApGAd0AAOjfAHs=
+  </data>
+ </layer>
+ <layer id="22" name="House10Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALCQBaI5YBYng522QKxHRDb08GuUTAKRgF9AABPJAEV
+  </data>
+ </layer>
+ <layer id="23" name="House10Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjILBB6oG2gGjYBSMAqoCANuHAHs=
+  </data>
+ </layer>
+ <layer id="24" name="House11Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMBSBLBDLAbE8HeyyBWI7ILang12jYHgCAJt2ARU=
+  </data>
+ </layer>
+ <layer id="25" name="House11Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAoIA4eBdsAoGNIAAJhwAEE=
+  </data>
+ </layer>
+ <layer id="26" name="House12Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMFyALBDLAbE4HeyyBWI7IDang12jYOgDAGAGAQU=
+  </data>
+ </layer>
+ <layer id="27" name="House12Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMArIA1UD7YBRMGQAABF3AHs=
+  </data>
+ </layer>
+ <layer id="28" name="House13Dead" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMNyAJBDLAbE8HeyyBGI7ILang12jYOgCAGpWAQ0=
+  </data>
+ </layer>
+ <layer id="29" name="House13Closed" width="27" height="20" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAooAw4D7YBRMOgBAJFwAEE=
+  </data>
+ </layer>
+</map>

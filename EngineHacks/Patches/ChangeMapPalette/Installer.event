@@ -1,0 +1,14 @@
+PUSH
+ORG 0x19950
+jumpToHack(change_map_palette);
+ORG 0x19984
+jumpToHack(change_map_palette2);
+POP
+
+ALIGN 4
+change_map_palette:
+#incbin "change_map_palette.dmp"
+
+ALIGN 4
+change_map_palette2:
+#incbin "change_map_palette2.dmp"

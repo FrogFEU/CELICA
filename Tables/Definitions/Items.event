@@ -1,0 +1,7 @@
+// Units
+#define KeeperUnitID 1
+
+// Classes
+
+// Items
+#define ClassCoreItemID 0xA0

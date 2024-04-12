@@ -1,0 +1,49 @@
+#define SoundRoomEntry(songid,length,name) "WORD songid length 0 name"
+#define SoundRoomTerminator "WORD 0xFFFFFFFF 0 0 0"
+
+PUSH
+ORG 0x1BC14   
+POIN NewSoundRoom
+ORG 0x1BCC4
+POIN NewSoundRoom
+ORG 0xAECA8
+POIN NewSoundRoom
+ORG 0xAECD0
+POIN NewSoundRoom
+ORG 0xAED2C
+POIN NewSoundRoom
+ORG 0xAEEBC
+POIN NewSoundRoom
+ORG 0xAF438
+POIN NewSoundRoom
+ORG 0xAF830
+POIN NewSoundRoom
+ORG 0xAFE30
+POIN NewSoundRoom
+ORG 0xB0080
+POIN NewSoundRoom
+ORG 0xB042C
+POIN NewSoundRoom
+POP
+
+ALIGN 4
+NewSoundRoom:
+// Event themes
+SoundRoomEntry(SongTurnaboutAirlinesIntroID, 0, SongTurnaboutAirlinesIntroName)
+SoundRoomEntry(SongYatagarasuID, 0, SongYatagarasuName)
+SoundRoomEntry(SongCrisesOfFateID, 0, SongCrisesOfFateName)
+SoundRoomEntry(SongWhatComesFromDarknessID, 0, SongWhatComesFromDarkness)
+SoundRoomEntry(SongHyzantesSchemesID, 0, SongHyzantesSchemes)
+SoundRoomEntry(SongFE4Conversation1ID, 0, SongFE4Conversation1)
+SoundRoomEntry(SongOffToWarID, 0, SongOffToWar)
+SoundRoomEntry(SongElegyOfBattleID, 0, SongElegyOfBattle)
+SoundRoomEntry(SongWithUsID, 0, SongWithUs)
+SoundRoomEntry(SongAnotherVictoryID, 0, SongAnotherVictory)
+// Player phase themes
+SoundRoomEntry(SongLandOfFrozenForestID, 0, SongLandOfFrozenForest)
+SoundRoomEntry(SongCombatAdversityID, 0, SongCombatAdversity)
+SoundRoomEntry(SongMoonlightID, 0, SongMoonlight)
+// Enemy phase themes
+SoundRoomEntry(SongOnsetID, 0, SongOnset)
+SoundRoomEntry(SongSortieFormationID, 0, SongSortieFormation)
+SoundRoomTerminator

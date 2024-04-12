@@ -1,0 +1,44 @@
+## SongTurnaboutAirlinesIntroName
+[OpenQuote]Turnabout Airlines[CloseQuote] (AAI: ME)[X]
+
+## SongYatagarasuName
+Yatagarasu (AAI: ME)[X]
+
+## SongCrisesOfFateName
+Crisis of Fate (AAI: ME)[X]
+
+## SongWhatComesFromDarkness
+What Comes from Darkness (FE 7)[X]
+
+## SongHyzantesSchemes
+Hyzante's Schemes (TS)[X]
+
+## SongFE4Conversation1
+Conversation 1 (FE 4)[X]
+
+## SongOffToWar
+Off to War (FE 11)[X]
+
+## SongSortieFormation
+Sortie Formation (KitN)[X]
+
+## SongLandOfFrozenForest
+Land of Frozen Forest (AO 2)[X]
+
+## SongOnset
+Onset (FE 11)[X]
+
+## SongMoonlight
+Moonlight (Iconoclasts)[X]
+
+## SongCombatAdversity
+Combat ~ Adversity (TS)[X]
+
+## SongElegyOfBattle
+Elegy of Battle (TS)[X]
+
+## SongWithUs
+With Us (FE 9)[X]
+
+## SongAnotherVictory
+Another Victory (AA: JFA)[X]

@@ -1,0 +1,57 @@
+## KeeperName
+Keeper[X]
+
+## LordName
+Lord[X]
+
+## RevenantName
+Zombie[X]
+
+## VillagerName
+Villager[X]
+
+## SoldierName
+Soldier[.][X]
+
+## KnightName
+Knight[X]
+
+## FighterName
+Fighter[.][X]
+
+## MyrmidonName
+Myrmidon[X]
+
+## MercenaryName
+Mercenary[.][X]
+
+## ArcherName
+Archer[X]
+
+## CavalierName
+Cavalier[X]
+
+## PegasusKnightName
+Pegasus Kn.[.][X]
+
+## WyvernRiderName
+Wyvern Rider[X]
+
+## ClericName
+Cleric[X]
+
+## MageName
+Mage[X]
+
+## MonkName
+Monk[X]
+
+## ShamanName
+Shaman[X]
+
+## PaladinName
+Paladin[.][X]
+
+## GeneralName
+General[.][X]
+

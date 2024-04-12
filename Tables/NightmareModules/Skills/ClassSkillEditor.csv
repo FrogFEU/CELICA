@@ -1,0 +1,41 @@
+INLINE ClassSkillTable,Skill
+None,0x0
+None,0x0
+Keeper,ShoveID
+Keeper,ShoveID
+Lord,ShoveID
+Lord,ShoveID
+Revenant,ShoveID
+Revenant,ShoveID
+Villager,ShoveID
+Villager,ShoveID
+Soldier,ShoveID
+Soldier,ShoveID
+Knight,ShoveID
+Knight,ShoveID
+Fighter,ShoveID
+Fighter,ShoveID
+Myrmidon,ShoveID
+Myrmidon,ShoveID
+Mercenary,ShoveID
+Mercenary,ShoveID
+Archer,ShoveID
+Archer,ShoveID
+Cavalier,CantoID
+Cavalier,CantoID
+Pegasus Knight,CantoID
+Pegasus Knight,CantoID
+Wyvern Rider,CantoID
+Wyvern Rider,CantoID
+Cleric,ShoveID
+Cleric,ShoveID
+Mage,ShoveID
+Mage,ShoveID
+Monk,ShoveID
+Monk,ShoveID
+Shaman,ShoveID
+Shaman,ShoveID
+Paladin,CantoID
+Paladin,CantoID
+General,ShoveID
+General,ShoveID

@@ -1,0 +1,43 @@
+#include "SilentGiveItem/Installer.event"
+
+#include "HandaxeWildcard/Installer.event"
+
+#include "ChangeMaxLuck/Installer.event"
+
+#include "AlwaysIndirectAnimation/Installer.event"
+
+#include "ShowHealAmount/Installer.event"
+
+#include "GroupAI/GroupAI.event"
+
+#include "ContinueBattleBGM/Installer.event"
+
+#include "ChangeBattleBGM/Installer.event"
+
+#include "ChangeMapBGM/Installer.event"
+
+#include "ChangeMapPalette/Installer.event"
+
+#include "GiveEXP/give_exp_Install.event"
+
+#include "ExtendWeaponDesc/Installer.event"
+
+#include "ItemNameExpansion (DEPRECATED)/Installer.event"
+
+#include "ChapterMenu/Installer.event"
+
+#include "Autosave/Installer.event"
+
+#include "FixedDifficulty/Installer.event"
+
+#include "Walking Sounds Fix/FE8-Walking Sounds EA.txt"
+
+//#include "OverrideActorCoords/OverrideActorCoords.event"
+
+#include "FatesEXP/Installer.event"
+
+//#include "ChangeChapterObjective/Installer.event"
+
+//#include "MultiTileMarker/MultiTileMarker_Install.event"
+
+//#include "GetBlueUnitCount/GetBlueUnitCountASMC.lyn.event"

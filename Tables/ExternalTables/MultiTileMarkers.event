@@ -1,0 +1,8 @@
+#define csvmacro000(arg000,arg001,arg002,arg003,arg004,arg005) "BYTE arg000 arg001 arg002 arg003; SHORT arg004 arg005; "
+#define MultiTileMarkerEntry(chapterID, xPos, yPos, unknown1, flag, unknown2) "BYTE chapterID xPos yPos unknown1; SHORT flag unknown2; "
+
+MultiTileMarker_Table:
+MultiTileMarkerEntry(0x00, 14, 17, 0x00, 0x1B, 0x00)   // 0x1B is FlagBossCanSpawn (aka opened door)
+MultiTileMarkerEntry(0x00, 14, 18, 0x00, 0x1B, 0x00)   // 0x1B is FlagBossCanSpawn (aka opened door)
+MultiTileMarkerEntry(0x00, 14, 19, 0x00, 0x1B, 0x00)   // 0x1B is FlagBossCanSpawn (aka opened door)
+BYTE 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF    // term

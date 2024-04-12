@@ -1,0 +1,174 @@
+//Generated - do not edit!
+//Copy paste the /* */ section into your definitions if desired.
+ 
+ 
+ 
+/* 
+//First free icon past vanilla is 222 / 0xDE 
+ 
+#define BlankIcon 222 
+#define BlessedAxeIcon 223 
+#define BlessedBowIcon 224 
+#define BlessedLanceIcon 225 
+#define BlessedMemoryIcon 226 
+#define BlessedSwordIcon 227 
+#define BrokenAxeIcon 228 
+#define BrokenBowIcon 229 
+#define BrokenClawIcon 230 
+#define BrokenLanceIcon 231 
+#define BrokenMemoryIcon 232 
+#define BrokenStaffIcon 233 
+#define BrokenSwordIcon 234 
+#define ClassCoreIcon 235 
+#define CleaveBowIcon 236 
+#define CymbelineIcon 237 
+#define DarkSpikesIcon 238 
+#define DeathIcon 239 
+#define DrainedTomeIcon 240 
+#define EvilEyeIcon 241 
+#define InfectiousClawIcon 242 
+#define IronMemoryIcon 243 
+#define Is_ds_wing_spear_fixIcon 244 
+#define KillerClawIcon 245 
+#define KillerMemoryIcon 246 
+#define LoptousIcon 247 
+#define RagnarokIcon 248 
+#define RangedMemoryIcon 249 
+#define RottenClawIcon 250 
+#define RottenTalonIcon 251 
+#define RoyalClawIcon 252 
+#define RoyalMemoryIcon 253 
+#define SeraphimIcon 254 
+#define SharpTalonIcon 255 
+#define SilverMemoryIcon 256 
+#define SteelMemoryIcon 257 
+#define ThaniIcon 258 
+#define vanilla_iconsIcon 259 
+#define WolfBeilIcon 260 
+*/ 
+ 
+ 
+ 
+ 
+//Image Data 
+ 
+PUSH 
+ 
+ItemIconEntry(BlankIcon) 
+#incbin "dmp/Blank.dmp" 
+ 
+ItemIconEntry(BlessedAxeIcon) 
+#incbin "dmp/BlessedAxe.dmp" 
+ 
+ItemIconEntry(BlessedBowIcon) 
+#incbin "dmp/BlessedBow.dmp" 
+ 
+ItemIconEntry(BlessedLanceIcon) 
+#incbin "dmp/BlessedLance.dmp" 
+ 
+ItemIconEntry(BlessedMemoryIcon) 
+#incbin "dmp/BlessedMemory.dmp" 
+ 
+ItemIconEntry(BlessedSwordIcon) 
+#incbin "dmp/BlessedSword.dmp" 
+ 
+ItemIconEntry(BrokenAxeIcon) 
+#incbin "dmp/BrokenAxe.dmp" 
+ 
+ItemIconEntry(BrokenBowIcon) 
+#incbin "dmp/BrokenBow.dmp" 
+ 
+ItemIconEntry(BrokenClawIcon) 
+#incbin "dmp/BrokenClaw.dmp" 
+ 
+ItemIconEntry(BrokenLanceIcon) 
+#incbin "dmp/BrokenLance.dmp" 
+ 
+ItemIconEntry(BrokenMemoryIcon) 
+#incbin "dmp/BrokenMemory.dmp" 
+ 
+ItemIconEntry(BrokenStaffIcon) 
+#incbin "dmp/BrokenStaff.dmp" 
+ 
+ItemIconEntry(BrokenSwordIcon) 
+#incbin "dmp/BrokenSword.dmp" 
+ 
+ItemIconEntry(ClassCoreIcon) 
+#incbin "dmp/ClassCore.dmp" 
+ 
+ItemIconEntry(CleaveBowIcon) 
+#incbin "dmp/CleaveBow.dmp" 
+ 
+ItemIconEntry(CymbelineIcon) 
+#incbin "dmp/Cymbeline.dmp" 
+ 
+ItemIconEntry(DarkSpikesIcon) 
+#incbin "dmp/DarkSpikes.dmp" 
+ 
+ItemIconEntry(DeathIcon) 
+#incbin "dmp/Death.dmp" 
+ 
+ItemIconEntry(DrainedTomeIcon) 
+#incbin "dmp/DrainedTome.dmp" 
+ 
+ItemIconEntry(EvilEyeIcon) 
+#incbin "dmp/EvilEye.dmp" 
+ 
+ItemIconEntry(InfectiousClawIcon) 
+#incbin "dmp/InfectiousClaw.dmp" 
+ 
+ItemIconEntry(IronMemoryIcon) 
+#incbin "dmp/IronMemory.dmp" 
+ 
+ItemIconEntry(Is_ds_wing_spear_fixIcon) 
+#incbin "dmp/Is_ds_wing_spear_fix.dmp" 
+ 
+ItemIconEntry(KillerClawIcon) 
+#incbin "dmp/KillerClaw.dmp" 
+ 
+ItemIconEntry(KillerMemoryIcon) 
+#incbin "dmp/KillerMemory.dmp" 
+ 
+ItemIconEntry(LoptousIcon) 
+#incbin "dmp/Loptous.dmp" 
+ 
+ItemIconEntry(RagnarokIcon) 
+#incbin "dmp/Ragnarok.dmp" 
+ 
+ItemIconEntry(RangedMemoryIcon) 
+#incbin "dmp/RangedMemory.dmp" 
+ 
+ItemIconEntry(RottenClawIcon) 
+#incbin "dmp/RottenClaw.dmp" 
+ 
+ItemIconEntry(RottenTalonIcon) 
+#incbin "dmp/RottenTalon.dmp" 
+ 
+ItemIconEntry(RoyalClawIcon) 
+#incbin "dmp/RoyalClaw.dmp" 
+ 
+ItemIconEntry(RoyalMemoryIcon) 
+#incbin "dmp/RoyalMemory.dmp" 
+ 
+ItemIconEntry(SeraphimIcon) 
+#incbin "dmp/Seraphim.dmp" 
+ 
+ItemIconEntry(SharpTalonIcon) 
+#incbin "dmp/SharpTalon.dmp" 
+ 
+ItemIconEntry(SilverMemoryIcon) 
+#incbin "dmp/SilverMemory.dmp" 
+ 
+ItemIconEntry(SteelMemoryIcon) 
+#incbin "dmp/SteelMemory.dmp" 
+ 
+ItemIconEntry(ThaniIcon) 
+#incbin "dmp/Thani.dmp" 
+ 
+//ItemIconEntry(vanilla_iconsIcon) 
+//#incbin "dmp/vanilla_icons.dmp" 
+ 
+ItemIconEntry(WolfBeilIcon) 
+#incbin "dmp/WolfBeil.dmp" 
+ 
+POP 

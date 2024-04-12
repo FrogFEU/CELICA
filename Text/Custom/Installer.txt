@@ -1,0 +1,8 @@
+#include "Chapters/Installer.txt"
+
+#include "Classes/Installer.txt"
+
+#include "Characters.txt"
+#include "Items.txt"
+#include "SongNames.txt"
+#include "Misc.txt"

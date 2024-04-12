@@ -1,0 +1,30 @@
+#define EndConvo "CALL $9EE2C4"
+
+#define MoveLeft(speed, charID) "MOVE_1STEP speed charID 0"
+#define MoveRight(speed, charID) "MOVE_1STEP speed charID 1"
+#define MoveDown(speed, charID) "MOVE_1STEP speed charID 2"
+#define MoveUp(speed, charID) "MOVE_1STEP speed charID 3"
+
+#define HighlightChar(charID) "CAMERA charID; CURSOR_FLASHING charID; STAL 60; REMOVE_CURSORS"
+
+#define HighlightPos(x, y) "CAMERA [x, y]; CURSOR_FLASHING [x, y]; STAL 60; REMOVE_CURSORS"
+
+#define StartGameOver "ASMC 0x800D391" // Game over ASMC
+
+#define ClearAll "CLEA 0x0; CLEE 0x0; CLEN 0x0" 
+
+#define IronWeapon [0x1, 0x0, 0x0, 0x0]
+#define SteelWeapon [0x2, 0x0, 0x0, 0x0]
+#define SilverWeapon [0x3, 0x0, 0x0, 0x0]
+#define RangedWeapon [0x4, 0x0, 0x0, 0x0]
+#define KillerWeapon [0x5, 0x0, 0x0, 0x0]
+#define RapierWeapon [0x6, 0x0, 0x0, 0x0]
+#define BlessedWeapon [0x7, 0x0, 0x0, 0x0]
+#define BrokenWeapon [0x8, 0x0, 0x0, 0x0]
+
+//The following unset the event flag if they return false
+#define ContinueIfIDMatch(UnitID) "SVAL 0x2 UnitID; CALL 0x9EE19C"
+#define ContinueIfFactionMatch(AllegianceID) "SVAL 0x2 AllegianceID; CALL 0x9EE1B8"
+
+#define TutorialText(textID) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textID; TEXTEND; REMA"
+#define CGText(textID) "CGTEXTSTART; TEXTSHOW textID; TEXTEND; REMA"

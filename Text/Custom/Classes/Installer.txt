@@ -1,0 +1,4 @@
+#include "ClassCoreDescs.txt"
+#include "ClassCoreNames.txt"
+#include "ClassDescs.txt"
+#include "ClassNames.txt"

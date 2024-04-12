@@ -1,0 +1,68 @@
+//First free icon past vanilla is 222 / 0xDE 
+ 
+#define BlankIcon 222 
+#define BlessedAxeIcon 223 
+#define BlessedBowIcon 224 
+#define BlessedLanceIcon 225 
+#define BlessedSwordIcon 226 
+#define BrokenAxeIcon 227 
+#define BrokenBowIcon 228 
+#define BrokenClawIcon 229 
+#define BrokenLanceIcon 230 
+#define BrokenStaffIcon 231 
+#define BrokenSwordIcon 232 
+#define CleaveBowIcon 233 
+#define CymbelineIcon 234 
+#define DarkSpikesIcon 235 
+#define DeathIcon 236 
+#define DrainedTomeIcon 237 
+#define EvilEyeIcon 238 
+#define InfectiousClawIcon 239 
+#define Is_ds_wing_spear_fixIcon 240 
+#define KillerClawIcon 241 
+#define LoptousIcon 242 
+#define RagnarokIcon 243 
+#define RottenClawIcon 244 
+#define RottenTalonIcon 245 
+#define SeraphimIcon 246 
+#define SharpTalonIcon 247 
+#define ThaniIcon 248 
+#define WolfBeilIcon 249 
+
+// Ran out of space...
+
+#define BlessedMemoryIcon 0xCA 
+#define BrokenMemoryIcon 0xCB 
+#define ClassCoreIcon 0xCC 
+#define IronMemoryIcon 0xCD 
+#define KillerMemoryIcon 0xCE 
+#define RangedMemoryIcon 0xAD 
+#define RoyalMemoryIcon 0xAE
+#define SilverMemoryIcon 0xAF
+#define SteelMemoryIcon 0xFA
+#define RoyalClawIcon 0xFB
+
+
+
+
+ALIGN 4
+NewItemIcons:
+// Sheet with all icons goes here 
+#incbin "dmp/vanilla_icons.dmp" // Expanded to 255 icons. 
+
+#define ItemIconEntry(ItemIconID) "ORG NewItemIcons + (ItemIconID*128)"
+
+#include "GeneratedInstaller.event"
+
+
+
+PUSH
+ORG $36B4
+POIN NewItemIcons
+ORG $3788
+POIN NewItemIcons
+POP
+
+
+
+

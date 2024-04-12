@@ -1,0 +1,76 @@
+## KeeperCoreDesc
+Wpn: [monster][tab][tab]Mov: 5[tab][tab]Type: --[N]
+[X]
+
+## LordCoreDesc
+Wpn: [anima][tab][tab]Mov: 5[tab][tab]Type: --[N]
++1 Skl[tab][tab][sp]+3 Spd[tab][tab]+2 Res[X]
+
+## RevenantCoreDesc
+Wpn: [monster][tab][tab]Mov: 5[tab][tab]Type: [monster][N]
+-2 Skl[tab][tab][sp][sp][sp][sp][sp]-2 Spd[tab][tab][sp]-2 Def[X]
+
+## VillagerCoreDesc
+Wpn: [sword][tab][tab]Mov: 5[tab][tab]Type: --[N]
+No special abilities.[X]
+
+## SoldierCoreDesc
+Wpn: [lance][tab][tab]Mov: 5[tab][tab]Type: --[N]
++1 Str[tab][tab]+3 Skl[tab][tab]+2 Def[X]
+
+## KnightCoreDesc
+Wpn: [lance][tab][tab]Mov: 4[tab][tab]Type: [armor][N]
++2 Str[tab][tab]+2 Skl[tab][tab]+6 Def[X]
+
+## FighterCoreDesc
+Wpn: [axe][tab][tab]Mov: 5[tab][tab]Type: --[N]
++5 Str[tab][tab]+2 Skl[tab][tab]+1 Spd[X]
+
+## MyrmidonCoreDesc
+Wpn: [sword][tab][tab]Mov: 5[tab][tab]Type: --[N]
++1 Str[tab][tab]+7 Skl[tab][tab]+7 Spd[X]
+
+## MercenaryCoreDesc
+Wpn: [sword][tab][tab]Mov: 5[tab][tab]Type: --[N]
++3 Str[tab][tab]+3 Spd[tab][tab]+1 Def[X]
+
+## ArcherCoreDesc
+Wpn: [bow][tab][tab]Mov: 5[tab][tab]Type: --[N]
++2 Str[tab][tab]+2 Skl[tab][tab]+4 Spd[X]
+
+## CavalierCoreDesc
+Wpn: [sword][tab][tab]Mov: 7[tab][tab]Type: [horse][N]
++2 Skl[tab][tab][sp]+2 Spd[tab][tab]+1 Def[X]
+
+## PegasusKnightCoreDesc
+Wpn: [lance][tab][tab]Mov: 7[tab][tab]Type: [flier][N]
++3 Skl[tab][tab][sp]+4 Spd[tab][tab]+4 Res[X]
+
+## WyvernRiderCoreDesc
+Wpn: [axe][tab][tab]Mov: 7[tab][tab]Type: [flier][N]
++2 Str[tab][tab]+2 Skl[tab][tab]+2 Def[X]
+
+## ClericCoreDesc
+Wpn: [staff][tab][tab]Mov: 5[tab][tab]Type: --[N]
++1 Skl[tab][tab][sp]+1 Spd[tab][tab]+5 Res[X]
+
+## MageCoreDesc
+Wpn: [anima][tab][tab]Mov: 5[tab][tab]Type: --[N]
++2 Mag[tab][tab]+2 Skl[tab][tab]+2 Spd[X]
+
+## MonkCoreDesc
+Wpn: [light][tab][tab]Mov: 5[tab][tab]Type: --[N]
++3 Skl[tab][tab][sp]+5 Spd[tab][tab]+3 Res[X]
+
+## ShamanCoreDesc
+Wpn: [dark][tab][tab]Mov: 5[tab][tab]Type: [dark][N]
++4 Mag[tab][tab]+4 Skl[tab][tab]+1 Def[X]
+
+## PaladinCoreDesc
+Wpn: [sword][tab][tab]Mov: 8[tab][tab]Type: [horse][N]
++7 Skl[tab][tab][sp]+7 Spd[tab][tab]+7 Res[X]
+
+## GeneralCoreDesc
+Wpn: [lance][tab][tab]Mov: 5[tab][tab]Type: [armor][N]
++5 Str[tab][tab]+10 Skl[tab][tab]+10 Def[X]
+

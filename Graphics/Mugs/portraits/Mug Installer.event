@@ -1,0 +1,84 @@
+ALIGN 4
+AchillesMug:
+#incbin "Achilles_mug.dmp"
+#incbin "Achilles_frames.dmp"
+#incbin "Achilles_palette.dmp"
+#incbin "Achilles_minimug.dmp"
+
+ALIGN 4
+Fey6RedMug:
+#incbin "Fey6Red_mug.dmp"
+#incbin "Fey6Red_frames.dmp"
+#incbin "Fey6Red_palette.dmp"
+#incbin "Fey6Red_minimug.dmp"
+
+ALIGN 4
+Fey6ReverseMug:
+#incbin "Fey6Reverse_mug.dmp"
+#incbin "Fey6Reverse_frames.dmp"
+#incbin "Fey6Reverse_palette.dmp"
+#incbin "Fey6Reverse_minimug.dmp"
+
+ALIGN 4
+FlickMug:
+#incbin "Flick_mug.dmp"
+#incbin "Flick_frames.dmp"
+#incbin "Flick_palette.dmp"
+#incbin "Flick_minimug.dmp"
+
+ALIGN 4
+GaryMug:
+#incbin "Gary_mug.dmp"
+#incbin "Gary_frames.dmp"
+#incbin "Gary_palette.dmp"
+#incbin "Gary_minimug.dmp"
+
+ALIGN 4
+KlicasMug:
+#incbin "Klicas_mug.dmp"
+#incbin "Klicas_frames.dmp"
+#incbin "Klicas_palette.dmp"
+#incbin "Klicas_minimug.dmp"
+
+ALIGN 4
+MarthMug:
+#incbin "Marth_mug.dmp"
+#incbin "Marth_frames.dmp"
+#incbin "Marth_palette.dmp"
+#incbin "Marth_minimug.dmp"
+
+ALIGN 4
+MikeMug:
+#incbin "Mike_mug.dmp"
+#incbin "Mike_frames.dmp"
+#incbin "Mike_palette.dmp"
+#incbin "Mike_minimug.dmp"
+
+ALIGN 4
+MilaMug:
+#incbin "Mila_mug.dmp"
+#incbin "Mila_frames.dmp"
+#incbin "Mila_palette.dmp"
+#incbin "Mila_minimug.dmp"
+
+ALIGN 4
+MorbiusMug:
+#incbin "Morbius_mug.dmp"
+#incbin "Morbius_frames.dmp"
+#incbin "Morbius_palette.dmp"
+#incbin "Morbius_minimug.dmp"
+
+ALIGN 4
+NobbitMug:
+#incbin "Nobbit_mug.dmp"
+#incbin "Nobbit_frames.dmp"
+#incbin "Nobbit_palette.dmp"
+#incbin "Nobbit_minimug.dmp"
+
+ALIGN 4
+SolMug:
+#incbin "Sol_mug.dmp"
+#incbin "Sol_frames.dmp"
+#incbin "Sol_palette.dmp"
+#incbin "Sol_minimug.dmp"
+

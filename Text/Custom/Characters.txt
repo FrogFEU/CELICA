@@ -1,0 +1,151 @@
+## FeyName
+Fey[X]
+
+## FeyDesc
+The Chosen One. Cares for her friends[N]
+above all else. A bit hot-headed.[X]
+
+## FeyDeath
+[OpenMidLeft][LoadFey]
+Ah! No[Beat] I won't[Beat] [CloseEyes]abandon[Beat][A][X]
+
+
+## MilaName
+Mira[X]
+
+## MilaDesc
+A villager who prefers the sword[N]
+to the pen. Easily swayed.[X]
+
+## MilaDeath
+[OpenMidLeft][LoadMila]
+[CloseEyes]I[Beat][OpenEyes][MML] I can't handle it anymore[Beat]![N]
+I'll[Beat] I'll be back[Beat]![A][X]
+
+
+## AchillesName
+Achilles[X]
+
+## AchillesDesc
+The youngest prince of Gothill, who spends[N]
+most of his time in the countryside. Kind.[X]
+
+## AchillesDeath
+[OpenMidLeft][LoadAchilles]
+O-oh[Beat] This is too much[Beat][N]
+[CloseEyes]I must[Beat] retreat[Beat][A][X]
+
+
+## KlicasName
+Caspian[X]
+
+## KlicasDesc
+The long-suffering bodyguard of Achilles.[N]
+Trusts nobody.[X]
+
+## KlicasDeath
+[OpenMidLeft][LoadKlicas]
+My lord[CloseEyes][Beat][N]
+[OpenEyes]Take care[Beat]![A][X]
+
+
+## FlickName
+Felix[X]
+
+## FlickDesc
+A calm person who doesn't care about[N]
+the opinions of others. Very perceptive.[X]
+
+## FlickDeath
+[OpenMidLeft][LoadFlick]
+Ouch.[4.] Well, I'm out.[4.] Good[N]
+luck with the rest.[A][X]
+
+
+## GaryName
+Gisella[X]
+
+## GaryDesc
+Norman's childhood friend.[N]
+Takes nothing seriously. [X]
+
+## GaryDeath
+[OpenMidLeft][LoadGary]
+Ha! Oh well. See you around[Beat][CloseEyes] Maybe[Beat][A][X]
+
+
+## NobbitName
+Norman[X]
+
+## NobbitDesc
+Gisella's childhood friend.[N]
+Slightly cowardly.[X]
+
+## NobbitDeath
+[OpenMidLeft][LoadNobbit]
+N-no[Beat] [MML]I don't want to[Beat][CloseEyes] die[Beat][A][X]
+
+
+## MikeName
+Mike[X]
+
+## MikeDesc
+A retired solider coming back to[N]
+his home. Has terrible luck.[X]
+
+## MikeDeath
+[OpenMidLeft][LoadMike]
+At least[Beat] I got to see home[Beat][CloseEyes][N]
+one last time[Beat][A][X]
+
+
+## SolName
+Sol[X]
+
+## SolDesc
+A commander in King Michael Philips[N]
+XII's army. Dutiful and stern.[X]
+
+## SolDeath
+[OpenMidLeft][LoadSol]
+Impossible! H-how[Beat]? What[Beat][N]
+[CloseEyes]what are you[Beat][A][X]
+
+## SolBattle
+[OpenMidLeft][LoadSol]
+Huh?[4.] Why are you still[N]
+here?[4.][CloseEyes] Ugh.[AN]
+[OpenEyes]Must I knock some sense[N]
+into you myself?![A][X]
+
+
+## MorbiusName
+Morbius[X]
+
+## MorbiusDesc
+A failed necromancer from a far[N]
+away place. Today is his day.[X]
+
+## MorbiusDeath
+[OpenMidLeft][LoadMorbius]
+No! [MML]No[Beat]! But today[Beat][N]
+[CloseEyes]was my day[Beat][A][X]
+
+## MorbiusBattle
+[OpenMidLeft][LoadMorbius]
+Ha[MML]ha[MML]ha[MML]ha[MML]![AN]
+Quake and tremble before[N]
+me, mortals![AN]
+I am the master of[N]
+this world now![A][X]
+
+## GenericSoldierDesc
+A soldier in His Holiness King[N]
+Michael Philips XII's army.[X]
+
+
+## MinionName
+Minion[X]
+
+## MinionDesc
+One of Mordred's lackeys.[X]

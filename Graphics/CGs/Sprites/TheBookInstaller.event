@@ -1,0 +1,13 @@
+
+    ALIGN 4
+    TheBookTSA:
+    #incbin "dmp/TheBook_tsa.dmp"
+
+    ALIGN 4
+    TheBookImage:
+    #incbin "dmp/TheBook_img.dmp"
+
+    ALIGN 4
+    TheBookPalette:
+    #incext Png2Dmp --palette-only "TheBook.png"
+    

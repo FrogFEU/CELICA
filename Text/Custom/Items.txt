@@ -1,0 +1,239 @@
+## KillingDesc
+Increases critical hit rate.[X]
+
+## RapierDesc
+Effective against [horse]/[armor].[X]
+
+## BlessedDesc
+Effective against [monster]/[dark].[X]
+
+## EmptyDesc
+ [.][X]
+
+
+## BowDesc
+Effective against [flier].[X]
+
+## BowKillingDesc
+Effective against [flier].[N]
+Increases critical hit rate.[X]
+
+## BowRapierDesc
+Effective against [flier]/[horse]/[armor].[X]
+
+## BowBlessedDesc
+Effective against [flier]/[monster].[X]
+
+
+## BrokenDesc
+A broken and barely usable weapon.[X]
+
+## DrainedName
+Drained Tome[X]
+
+## DrainedDesc
+A drained tome, incapable of combat.[X]
+
+
+
+## WindEdgeName
+Wind Edge[X]
+
+## WindEdgeDesc
+A magic sword which uses[N]
+Strength for attacks.[X]
+
+## BlessedSwordName
+Blessed Sword[X]
+
+## BrokenSwordName
+Broken Sword[X]
+
+
+## WingSpearName
+Wing Spear[X]
+
+## BlessdLanceName
+Blessd Lance[X]
+
+## BrokenLanceName
+Broken Lance[X]
+
+
+## WolfBeilName
+Wolf Beil[X]
+
+## BlessedAxeName
+Blessed Axe[X]
+
+## BrokenAxeName
+Broken Axe[X]
+
+
+## CleaveBowName
+Cleave Bow[X]
+
+## BlessedBowName
+Blessed Bow[X]
+
+## BrokenBowName
+Broken Bow[X]
+
+
+## RagnarokName
+Ragnarok[X]
+
+## SagittaeName
+Sagittae[X]
+
+## ExcaliburName
+Excalibur[X]
+
+## ExcaliburDesc
+Increases critical hit rate.[N]
+Not effective against [flier].[X]
+
+## CymbelineName
+Cymbeline[X]
+
+## SeraphimName
+Seraphim[X]
+
+
+## LightName
+Light[X]
+
+## LuceName
+Luce[X]
+
+## ThaniName
+Thani[X]
+
+
+## DeathName
+Death[X]
+
+## DarkSpikesName
+Dark Spikes[X]
+
+## LoptousName
+Loptous[X]
+
+## LoptousDesc
+Effective against humans.[X]
+
+
+## ExpelName
+Expel[X]
+
+## ExpelDesc
+An offensive staff which[N]
+instantly slays monsters.[X]
+
+## BrokenStaffName
+Broken Staff[X]
+
+## BrokenStaffDesc
+A broken staff. Cannot be used anymore.[X]
+
+## HealDesc
+Restores 3 + Mag HP to[N]
+an adjacent ally.[X]
+
+## MendDesc
+Restores 10 + Mag HP to[N]
+an adjacent ally.[X]
+
+## FortifyDesc
+Restores 10 + Mag HP to[N]
+all adjacent allies.[X]
+
+## PhysicDesc
+Restores 5 + Mag HP to[N]
+a distant ally.[X]
+
+
+## RottenClawName
+Rotten Claw[X]
+
+## RottenTalonName
+Rotten Talon[X]
+
+## SharpTalonName
+Sharp Talon[X]
+
+## EvilEyeName
+Evil Eye[X]
+
+## KillerClawName
+Killer Claw[X]
+
+## RoyalClawName
+Royal Claw[X]
+
+## InfectiousClawName
+Infectious Claw[X]
+
+## InfectiousClawDesc
+Poisons the target, turning[N]
+them into a zombie in 2 turns.[X]
+
+## BrokenClawName
+Broken Claw[X]
+
+
+## IronMemoryName
+Iron Memory[X]
+
+## IronMemoryDesc
+The memory of something[N]
+simple and durable.[X]
+
+## SteelMemoryName
+Steel Memory[X]
+
+## SteelMemoryDesc
+The memory of something[N]
+heavy and strong.[X]
+
+## SilverMemoryName
+Silver Memory[X]
+
+## SilverMemoryDesc
+The memory of something[N]
+elegant and rare.[X]
+
+## RangedMemoryName
+Ranged Memory[X]
+
+## RangedMemoryDesc
+The memory of something[N]
+reliable and inescapeable.[X]
+
+## KillingMemoryName
+Killing Memory[X]
+
+## KillingMemoryDesc
+The memory of something[N]
+painful and unpredictable.[X]
+
+## EffectiveMemoryName
+Royal Memory[X]
+
+## EffectiveMemoryDesc
+The memory of something[N]
+piercing and unique.[X]
+
+## BlessedMemoryName
+Blessed Memory[X]
+
+## BlessedMemoryDesc
+The memory of something[N]
+holy and sacred.[X]
+
+## BrokenMemoryName
+Broken Memory[X]
+
+## BrokenMemoryDesc
+The memory of something[N]
+wasted and forgotten.[X]

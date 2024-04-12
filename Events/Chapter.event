@@ -1,0 +1,827 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x7, PointerList)
+
+#define FlagFirstPaletteTrigger 0x28
+#define FlagSecondPaletteTrigger 0x27
+
+#define VillageFlag 0x1
+#define Ch1FlagGaryNobbitArrive 0x10
+#define Ch1FlagBottomVillage 0x14
+#define Ch1FlagTopVillage 0x17
+#define Ch1FlagDusk FlagFirstPaletteTrigger
+#define Ch1FlagNight FlagSecondPaletteTrigger
+#define Ch1FlagMikeZombieForeshadow 0x20
+#define Ch1FlagMikeTalk 0x21
+#define Ch1FlagMikeZombieSpawn 0x22
+#define Ch1FlagDuskDone 0x25
+#define Ch1FlagNightDone 0x26
+
+#define Ch1FlagTriggerSecondPartReinforcement 0x23
+#define Ch1FlagSecondPartReinforcementSpawned 0x24
+//#define Ch1FlagPegReinforcementSpawned 0x25
+
+#define Ch1FlagTriggerDusk 0x0C
+#define Ch1FlagTriggerNight 0x0D
+#define Ch1FlagShouldTriggerDusk 0x0A
+#define Ch1FlagShouldTriggerNight 0x0B
+
+#define DisplayEndingBasedOnMemory(item, text, labelID) "HasItemCheck(Fey, item); BEQ labelID sC s0; CGText(text); LABEL labelID;"
+#define DisplayEndingBasedOnCore(core, text, labelID) "HasItemWithDurabilityCheck(Fey, core); BEQ labelID sC s0; CGText(text); LABEL labelID;"
+
+setText(0x160, NewChName)
+
+ALIGN 4
+NewChName:
+String("Prologue: End of All")
+BYTE 0
+
+ALIGN 4
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+// Fixed turn
+TurnEventPlayer(Ch1FlagGaryNobbitArrive, SpawnGaryNobbit, 4)
+TurnEventPlayer(Ch1FlagMikeZombieForeshadow, MikeZombieForeshadow, 8)
+TurnEventPlayer(Ch1FlagMikeZombieSpawn, MikeZombieSpawn, 10)
+
+TurnEventPlayer(0, SpawnPegReinforcement, 17)
+TurnEventPlayer(0, SpawnFinalHumanReinforcement, 20)
+TurnEventPlayer(0, SpawnZombies1, 21)
+TurnEventPlayer(0, SpawnZombies2, 22)
+TurnEventPlayer(0, SpawnZombies3, 23)
+TurnEventPlayer(0, SpawnZombies12, 24)
+TurnEventPlayer(0, SpawnZombies13, 25)
+TurnEventPlayer(0, SpawnZombies23, 26)
+TurnEventPlayer(0, SpawnZombies123, 27, 50)
+
+TurnEventPlayer(0, SpawnAntiSoftlockReinforcement, 23)
+
+// Conditional
+//TurnEventPlayer(Ch1FlagSecondPartReinforcementSpawned, MaybeSpawnSecondPartReinforcement, 1, 255)
+TurnEventPlayer(0, SpawnSecondPartReinforcement, 15)
+
+// Dusk/Night
+TurnEventPlayer(Ch1FlagShouldTriggerDusk, EnterDusk, 1, 255)
+TurnEventPlayer(Ch1FlagShouldTriggerNight, EnterNight, 1, 255)
+TurnEventPlayer(Ch1FlagDusk, EnterDusk, 10)
+TurnEventPlayer(Ch1FlagNight, EnterNight, 15)
+
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+CharacterEventBothWays(Ch1FlagMikeTalk, MikeRecruitFey, Mike, Fey)
+CharacterEventBothWays(Ch1FlagMikeTalk, MikeRecruitMila, Mike, Mila)
+CharacterEventBothWays(Ch1FlagMikeTalk, MikeRecruitAchilles, Mike, Achilles)
+END_MAIN
+
+LocationBasedEvents:
+Village(0x10, SpawnGaryNobbit, 4, 9) // Gary Nobbit
+Village(0x11, Get20EXP, 8, 9)
+Village(0x12, Get20EXP, 4, 14)
+Village(0x13, Get20EXP, 11, 4)
+LOCA 0x14 BottomVillage [12, 15] 0x20
+House(0x14, BottomVillage, 12, 16) // Bottom red village
+Village(0x15, Get20EXP, 24, 2)
+LOCA 0x17 TopVillage [21, 1] 0x20
+House(0x17, TopVillage, 21, 2) // Top red village
+Village(0x18, Get20EXP, 20, 10)
+Village(0x19, Get20EXP, 18, 10)
+Village(0x1A, Get20EXP, 25, 10)
+Village(0x1B, Get20EXP, 18, 14)
+Village(0x1C, Get20EXP, 23, 14)
+Village(0x1D, Get20EXP, 25, 14)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+
+AREA Ch1FlagTriggerDusk CondEnterDusk [5, 16] [26, 19]
+AREA Ch1FlagTriggerDusk CondEnterDusk [14, 0] [26, 19]
+AREA Ch1FlagTriggerNight CondEnterNight [16, 11] [26, 19]
+//AREA Ch1FlagTriggerSecondPartReinforcement TriggerSecondPartReinforcement [15, 0] [26, 19]
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+Units:
+
+// =======     CUTSCENE     =======
+
+IntroFey:
+UNIT Fey Keeper 0x00 Level(1, Ally, 0) [7,5] 0x00 0x00 0x0 0x00 [0x8, 0x8, 0x0, 0x0] NoAI 
+UNIT
+
+IntroVillagers:
+UNIT Sol Paladin 0x00 Level(1, Enemy, 0) [11,6] 0x00 0x00 0x0 0x00 [0x8, 0x8, 0x0, 0x0] NoAI 
+UNIT M15HP Knight 0x00 Level(1, Enemy, 0) [14,5] 0x00 0x00 0x0 0x00 RangedWeapon GuardTileAI 
+UNIT M15HP Knight 0x00 Level(1, Enemy, 0) [14,6] 0x00 0x00 0x0 0x00 RangedWeapon GuardTileAI 
+UNIT M15HP Fighter 0x00 Level(1, Enemy, 0) [10,8] 0x00 0x00 0x0 0x00 RangedWeapon GuardTileAI 
+UNIT F15HP Fighter 0x00 Level(1, Enemy, 0) [12,8] 0x00 0x00 0x0 0x00 RangedWeapon GuardTileAI 
+
+UNIT Mila Villager 0x00 Level(1, Ally, 0) [9,5] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Achilles Lord 0x00 Level(1, Ally, 0) [9,6] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Klicas Soldier 0x00 Level(1, Ally, 0) [8,6] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Flick Villager 0x00 Level(1, Ally, 0) [7,4] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT
+
+OutroUnits:
+UNIT Sol Keeper 0x00 Level(1, Ally, 0) [23,17] 0x00 0x00 0x0 0x00 [0x8, 0x8, 0x0, 0x0] NoAI 
+UNIT Achilles Lord 0x00 Level(1, Ally, 0) [24,15] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Mila Villager 0x00 Level(1, Ally, 0) [22,15] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Klicas Soldier 0x00 Level(1, Ally, 0) [24,19] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Flick Villager 0x00 Level(1, Ally, 0) [20,16] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Gary Villager 0x00 Level(1, Ally, 0) [20,18] 0x00 0x00 0x0 0x00 SteelWeapon NoAI 
+UNIT Nobbit Villager 0x00 Level(1, Ally, 0) [21,19] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Mike Paladin 0x00 Level(1, Ally, 0) [26,16] 0x00 0x00 0x0 0x00 SilverWeapon NoAI 
+
+UNIT M8HP Revenant 0x00 Level(1, Enemy, 0) [21,13] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT M8HP Revenant 0x00 Level(1, Enemy, 0) [20,12] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT M8HP Revenant 0x00 Level(1, Enemy, 0) [18,16] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT M8HP Revenant 0x00 Level(1, Enemy, 0) [17,18] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT M8HP Revenant 0x00 Level(1, Enemy, 0) [17,11] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT M8HP Revenant 0x00 Level(1, Enemy, 0) [25,12] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT M8HP Revenant 0x00 Level(1, Enemy, 0) [23,10] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT M8HP Revenant 0x00 Level(1, Enemy, 0) [14,18] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT M8HP Revenant 0x00 Level(1, Enemy, 0) [15,13] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT
+
+
+// =======      PLAYER      =======
+
+IntroFeyInVillage:
+UNIT Fey Keeper 0x00 Level(1, Ally, 0) [4,0] 0x00 0x00 0x1 REDA4R1 [0x8, 0x8, 0x0, 0x0] NoAI 
+UNIT
+
+Players:
+//UNIT Fey Keeper 0x00 Level(1, Ally, 0) [4,1] 0x00 0x00 0x0 0x00 [0x8, 0x8, 0x0, 0x0] NoAI 
+UNIT Mila Villager 0x00 Level(1, Ally, 0) [1,2] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Achilles Lord 0x00 Level(1, Ally, 0) [2,1] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Klicas Soldier 0x00 Level(1, Ally, 0) [2,3] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT Flick Villager 0x00 Level(1, Ally, 0) [3,2] 0x00 0x00 0x0 0x00 IronWeapon NoAI 
+UNIT
+
+// ======= PLAYER REINFORCE =======
+
+PlayerReinforce1:
+UNIT Gary Villager 0x00 Level(1, Ally, 0) [4, 9] 0x00 0x00 0x1 REDA3R10 SteelWeapon NoAI 
+UNIT Nobbit Villager 0x00 Level(1, Ally, 0) [4, 9] 0x00 0x00 0x1 REDA5R10 IronWeapon NoAI 
+UNIT
+
+PlayerReinforce2:
+UNIT Mike Paladin 0x00 Level(10, NPC, 0) [7,19] 0x00 0x00 0x0 0x00 SilverWeapon NoAI 
+UNIT
+
+// =======      ENEMY       =======
+
+Enemies:
+UNIT F8HP Archer 0x00 Level(1, Enemy, 0) [1,4] 0x00 0x00 0x0 0x00 SteelWeapon PursueWithoutHeedAI 
+UNIT M8HP Soldier 0x00 Level(1, Enemy, 0) [2,9] 0x00 0x00 0x0 0x00 IronWeapon PursueWithoutHeedAI 
+UNIT M8HP Soldier 0x00 Level(1, Enemy, 0) [0,9] 0x00 0x00 0x0 0x00 IronWeapon PursueWithoutHeedAI 
+UNIT M10HP Mercenary 0x00 Level(1, Enemy, 0) [9,6] 0x00 0x00 0x0 0x00 SteelWeapon PursueWithoutHeedAI 
+UNIT F10HP Mercenary 0x00 Level(1, Enemy, 0) [8,5] 0x00 0x00 0x0 0x00 RapierWeapon PursueWithoutHeedAI 
+UNIT M15HP Knight 0x00 Level(1, Enemy, 0) [14,5] 0x00 0x00 0x0 0x00 RangedWeapon GuardTileAI 
+UNIT M15HP Knight 0x00 Level(1, Enemy, 0) [14,6] 0x00 0x00 0x0 0x00 RangedWeapon GuardTileAI 
+UNIT M8HP Cleric 0x00 Level(1, Enemy, 0) [12,8] 0x00 0x00 0x0 0x00 RangedWeapon HealUnits 
+UNIT
+
+Enemies2:
+UNIT F8HP Myrmidon 0x00 Level(1, Enemy, 0) [1,12] 0x00 0x00 0x0 0x00 KillerWeapon GroupOneAI 
+UNIT F8HP Monk 0x00 Level(1, Enemy, 0) [1,19] 0x00 0x00 0x0 0x00 SteelWeapon GroupOneAI 
+UNIT F8HP Archer 0x00 Level(1, Enemy, 0) [9,14] 0x00 0x00 0x0 0x00 RangedWeapon GroupOneAI 
+UNIT F10HP Fighter 0x00 Level(1, Enemy, 0) [8,15] 0x00 0x00 0x0 0x00 SilverWeapon GroupOneAI 
+
+UNIT M10HP Fighter 0x00 Level(1, Enemy, 0) [9,1] 0x00 0x00 0x0 0x00 IronWeapon GroupTwoAI 
+UNIT F12HP Cavalier 0x00 Level(1, Enemy, 0) [8,18] 0x00 0x00 0x0 0x00 IronWeapon [0x00,0x06,0x09,0x02] // Group two
+UNIT M12HP Cavalier 0x00 Level(1, Enemy, 0) [6,18] 0x00 0x00 0x0 0x00 SteelWeapon [0x00,0x06,0x09,0x02] // Group two
+UNIT
+
+Enemies3:
+UNIT M10HP Mage 0x00 Level(1, Enemy, 0) [7,17] 0x00 0x00 0x0 0x00 RapierWeapon GuardTileAI 
+UNIT M10HP Soldier 0x00 Level(1, Enemy, 0) [5,19] 0x00 0x00 0x0 0x00 RangedWeapon AttackInRangeAI 
+UNIT M10HP Soldier 0x00 Level(1, Enemy, 0) [9,19] 0x00 0x00 0x0 0x00 RangedWeapon AttackInRangeAI 
+UNIT F15HP Soldier 0x00 Level(1, Enemy, 0) [14,18] 0x00 0x00 0x0 0x00 SilverWeapon ChaseOnceApproachedAI 
+UNIT
+
+Enemies4:
+UNIT F10HP WyvernRider 0x00 Level(1, Enemy, 0) [19,12] 0x00 0x00 0x0 0x00 RapierWeapon GroupThreeAI 
+UNIT F10HP WyvernRider 0x00 Level(1, Enemy, 0) [18,13] 0x00 0x00 0x0 0x00 RapierWeapon GroupThreeAI 
+UNIT F10HP WyvernRider 0x00 Level(1, Enemy, 0) [19,14] 0x00 0x00 0x0 0x00 RapierWeapon GroupThreeAI 
+UNIT F10HP Soldier 0x00 Level(1, Enemy, 0) [21,11] 0x00 0x00 0x0 0x00 KillerWeapon GroupThreeAI 
+UNIT M10HP Soldier 0x00 Level(1, Enemy, 0) [23,12] 0x00 0x00 0x0 0x00 BlessedWeapon GroupThreeAI 
+UNIT
+
+BossGroup:
+UNIT Sol Paladin 0x00 Level(10, Enemy, 0) [23,17] 0x00 0x00 0x0 0x00 RangedWeapon GuardTileAI 
+UNIT F10HP Mage 0x00 Level(1, Enemy, 0) [22,18] 0x00 0x00 0x0 0x00 RangedWeapon GuardTileAI 
+UNIT F10HP Mage 0x00 Level(1, Enemy, 0) [24,18] 0x00 0x00 0x0 0x00 RangedWeapon GuardTileAI 
+UNIT
+
+// ======= ENEMY  REINFORCE =======
+
+MorbiusGroup:
+UNIT Morbius Shaman 0x00 Level(6, Enemy, 0) [26,7] 0x00 0x00 0x0 0x00 BlessedWeapon GroupFourAI 
+UNIT Minion8HP Shaman 0x00 Level(1, Enemy, 0) [26,8] 0x00 0x00 0x1 REDA25R8 SteelWeapon GroupFourAI 
+UNIT
+
+ZombieSummonGroup:
+UNIT Minion8HP Revenant 0x00 Level(1, Enemy, 0) [25,7] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT
+
+SecondPartReinforcement:
+UNIT F8HP Archer 0x00 Level(1, Enemy, 0) [16,0] 0x00 0x00 0x1 REDA16R2 IronWeapon [0x00, 0x00, 0x09, 0x03] // Group three
+UNIT F8HP Archer 0x00 Level(1, Enemy, 0) [17,0] 0x00 0x00 0x1 REDA17R3 IronWeapon [0x00, 0x00, 0x09, 0x03] // Group three
+UNIT M8HP Mage 0x00 Level(1, Enemy, 0) [11,19] 0x00 0x00 0x0 0x00 SteelWeapon PursueWithoutHeedAI
+UNIT M8HP Mage 0x00 Level(1, Enemy, 0) [12,19] 0x00 0x00 0x0 0x00 SteelWeapon PursueWithoutHeedAI
+UNIT
+
+PegsReinforcement:
+UNIT F8HP Cleric 0x00 Level(1, Enemy, 0) [0,10] 0x00 0x00 0x1 REDA3R10 KillerWeapon PursueWithoutHeedAI 
+UNIT M8HP PegasusKnight 0x00 Level(1, Enemy, 0) [0,10] 0x00 0x00 0x1 REDA1R10 BlessedWeapon PursueWithoutHeedAI
+UNIT M8HP PegasusKnight 0x00 Level(1, Enemy, 0) [0,8] 0x00 0x00 0x0 0x00 KillerWeapon PursueWithoutHeedAI
+UNIT M8HP PegasusKnight 0x00 Level(1, Enemy, 0) [0,12] 0x00 0x00 0x0 0x00 KillerWeapon PursueWithoutHeedAI
+UNIT
+
+FinalHumanReinforcement:
+UNIT M10HP Mercenary 0x00 Level(1, Enemy, 0) [18, 0] 0x00 0x00 0x1 REDA18R1 SilverWeapon PursueWithoutHeedAI 
+//UNIT M10HP Mercenary 0x00 Level(1, Enemy, 0) [20, 0] 0x00 0x00 0x1 REDA20R1 SilverWeapon PursueWithoutHeedAI 
+UNIT M10HP Myrmidon 0x00 Level(1, Enemy, 0) [19, 0] 0x00 0x00 0x1 REDA19R2 KillerWeapon PursueWithoutHeedAI 
+UNIT F10HP Cavalier 0x00 Level(1, Enemy, 0) [22, 19] 0x00 0x00 0x0 0x00 BlessedWeapon PursueWithoutHeedAI 
+UNIT F10HP Cavalier 0x00 Level(1, Enemy, 0) [24, 19] 0x00 0x00 0x0 0x00 BlessedWeapon PursueWithoutHeedAI 
+UNIT
+
+AntiSoftlockReinforcement:
+UNIT F10HP Knight 0x00 Level(1, Enemy, 0) [21, 19] 0x00 0x00 0x0 0x00 RapierWeapon GuardTileAI
+UNIT M10HP Knight 0x00 Level(1, Enemy, 0) [25, 19] 0x00 0x00 0x0 0x00 RapierWeapon GuardTileAI
+UNIT
+
+Zombies1Reinforcement:
+UNIT Minion8HP Revenant 0x00 Level(1, Enemy, 0) [9 ,19] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT Minion8HP Revenant 0x00 Level(1, Enemy, 0) [0 ,10] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT
+
+Zombies2Reinforcement:
+UNIT Minion8HP Revenant 0x00 Level(1, Enemy, 0) [5 ,0] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT Minion8HP Revenant 0x00 Level(1, Enemy, 0) [16,0] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT
+
+Zombies3Reinforcement:
+UNIT Minion8HP Revenant 0x00 Level(1, Enemy, 0) [26,4] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT Minion8HP Revenant 0x00 Level(1, Enemy, 0) [26,12] 0x00 0x00 0x0 0x00 BlessedWeapon OffensiveBrigandAI 
+UNIT
+
+BeginningScene:
+
+IntroInTheWoods:
+LOMA 0x1
+LOAD1 0x1 IntroFey
+MUSC 0x48 // Wind + Birds
+FADU 4
+STAL 120
+Text(Intro1)
+MUSC SongYatagarasuID
+SetBackground(0xA)
+STAL 60
+Text(Intro2)
+EndConvo
+MUSCSLOW 0x7FFF  
+Text(Intro3)
+MOVE 0 Fey [7, 7]
+ENUN
+GLOWINGCROSS Fey
+MUSC SongWhatComesFromDarknessID
+//STAL 60
+GLOWINGCROSS_END 
+TEXTSTART
+TEXTSHOW Intro4
+TEXTEND
+MUSCSLOW 0x7FFF
+EARTHQUAKE 0 1
+STAL 30
+SOUN 0xE7 // Brigand scream
+STAL 30
+EARTHQUAKE_END 
+MUSC SongCrisesOfFateID
+TEXTCONT
+TEXTEND
+//mid-text events go here
+MOVE 0 Fey [7, 10]
+ENUN
+TEXTCONT
+TEXTEND
+REMA
+
+FADI 15
+ClearAll
+IntroInVillage:
+MUSC SongOffToWarID
+LOMA 0x0
+LOAD1 0x1 IntroVillagers
+CAMERA [14,7]
+FADU 15
+STAL 30
+Text(VillageIntro1)
+MOVE 0 Sol [10, 6]
+MOVE 0 Achilles [8, 6]
+MOVE 0 Klicas [9, 6]
+ENUN
+StartBattle
+MissedAttack(0,0)
+EndAttack
+FIGHT_MAP Sol Klicas 0x1 0x0
+Text(VillageIntro2)
+MOVE 0 Mila [1, 0]
+MOVE 0 Achilles [2, 0]
+MOVE 0 Klicas [1, 1]
+MOVE 0 Flick [2, 1]
+ENUN
+Text(VillageIntroSolSpeech)
+FADI 15
+ENUN
+ClearAll
+CAMERA [0,0]
+LOAD1 0x1 Players //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+LOAD1 0x1 Enemies //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+LOAD1 0x1 Enemies2 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+LOAD1 0x1 Enemies3 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+LOAD1 0x1 Enemies4 //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+LOAD1 0x1 BossGroup //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+ENUN
+FADU 15
+LOAD1 0x1 IntroFeyInVillage //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+ENUN
+SetBackground(0x3)
+Text(VillageIntro3)
+EndConvo
+MUSC SongHyzantesSchemesID
+Text(VillageIntro4)
+
+Tutorials:
+HighlightChar(Fey)
+TutorialText(ReshapeTutorial)
+HighlightChar(Sol)
+TutorialText(TutorialSol)
+HighlightPos(8, 9)
+TutorialText(TutorialHouses)
+CAMERA [0, 0]
+ENUN
+TutorialText(TutorialGameplay)
+
+Gameplay:
+SetChapterSong(SongLandOfFrozenForestID, SongOnsetID, SongLandOfFrozenForestID, $1)
+
+ENUT Ch1FlagShouldTriggerDusk
+ENUT Ch1FlagShouldTriggerNight
+
+SilentGiveItemWithDurability(Eirika, ClassCoreItemID, Revenant)
+SilentGiveItemWithDurability(Eirika, ClassCoreItemID, Revenant)
+SilentGiveItemWithDurability(Eirika, ClassCoreItemID, Cleric)
+ENUN
+NoFade
+ENDA
+
+SpawnGaryNobbit:
+TILECHANGE 0x01
+LoadReinforcements(PlayerReinforce1)
+ENUN
+MUSC SongWithUsID
+Text(GaryNobbitArrive)
+NoFade
+ENDA
+
+TopVillage:
+CHECK_ACTIVE
+SVAL s1 Fey //the value to compare the check result to; unnecessary if the value is 0
+BNE 1 s1 sC //if the check result != Fey, go to label 1
+SetBackground(0x0) // House inner
+Text(GeneralChoiceFey) //this will only play when Fey is the active unit
+EndConvo
+ENUF Ch1FlagBottomVillage
+GOTO 2
+LABEL 1 //skips to here if the active unit is not Fey
+EVBIT_MODIFY 4 // Prevent scene skipping and dialogue skipping 
+SVAL r7 1 
+EVBIT_F 2 // Stop scene skipping if player was already
+SetBackground(0x0) // House inner
+Text(GeneralChoice)
+BNE 0x0 rC r7 
+// Answered Yes 
+EndConvo
+//PROMOTE -1 General 0x91
+ChangeToGeneralEvent(0)
+TILECHANGE 0x0D
+ENUT Ch1FlagTopVillage
+GOTO 0x63 
+LABEL 0 
+// Answered No 
+EndConvo
+ENUF Ch1FlagTopVillage
+LABEL 0x63 
+EVBIT_MODIFY 0 // Allow scene skipping etc
+LABEL 2
+NoFade 
+ENDA
+
+BottomVillage:
+CHECK_ACTIVE
+SVAL s1 Fey //the value to compare the check result to; unnecessary if the value is 0
+BNE 1 s1 sC //if the check result != Fey, go to label 1
+SetBackground(0x0) // House inner
+Text(SilverLanceChoiceFey) //this will only play when Fey is the active unit
+EndConvo
+ENUF Ch1FlagBottomVillage
+GOTO 2
+LABEL 1 //skips to here if the active unit is not Fey
+EVBIT_MODIFY 4 // Prevent scene skipping and dialogue skipping 
+SVAL r7 1 
+EVBIT_F 2 // Stop scene skipping if player was already
+SetBackground(0x0) // House inner
+Text(SilverLanceChoice)
+BNE 0x0 rC r7 
+// Answered Yes 
+EndConvo
+SwapItemEvent(255, 0x3, 5, 0)
+TILECHANGE 0x09
+ENUT Ch1FlagBottomVillage
+GOTO 0x63 
+LABEL 0 
+// Answered No 
+EndConvo
+ENUF Ch1FlagBottomVillage
+LABEL 0x63 
+EVBIT_MODIFY 0 // Allow scene skipping etc
+LABEL 2
+NoFade 
+ENDA
+
+Get20EXP:
+GiveEXPActive(15)
+NoFade
+ENDA
+
+MikeZombieForeshadow:
+CAM1 [7, 19]
+MUSC SongOffToWarID
+SetBackground(0x03) // Daytime fields
+Text(MikeArrive)
+EndConvo
+HighlightPos(7, 19)
+TutorialText(TutorialMikeArrive)
+CAM1 [26, 7]
+ENUN
+WARPIN [26,7]
+LOAD1 1 MorbiusGroup
+ENDWARP
+ENUN
+MUSC SongWhatComesFromDarknessID
+Text(MorbiusArrive)
+HighlightPos(25, 7)
+TutorialText(TutorialZombieArrive)
+NoFade
+ENDA
+
+MikeZombieSpawn:
+LoadReinforcements(PlayerReinforce2)
+ENUN
+CAM1 [25, 7]
+ENUN
+WARPIN [25,7]
+LOAD1 1 ZombieSummonGroup
+ENDWARP
+ENUN
+NoFade
+ENDA
+
+CondEnterDusk:
+ContinueIfFactionMatch(Ally)
+ENUF Ch1FlagShouldTriggerDusk
+NoFade
+ENDA
+
+EnterDusk:
+CHECK_EVENTID Ch1FlagDuskDone
+BNE 17 sC s0
+ENUT Ch1FlagDusk
+ENUT Ch1FlagDuskDone
+ASMC RefreshPalette
+CAMERA Fey
+ENUN
+MUSC SongFE4Conversation1ID
+Text(FeyMarthDusk)
+SetChapterSong(SongCombatAdversityID, SongSortieFormationID, SongCombatAdversityID, $1)
+CALL AskForSave
+LABEL 17
+NoFade
+ENDA
+
+CondEnterNight:
+ContinueIfFactionMatch(Ally)
+ENUF Ch1FlagShouldTriggerNight
+NoFade
+ENDA
+
+EnterNight:
+CHECK_EVENTID Ch1FlagNightDone
+BNE 18 sC s0
+ENUT Ch1FlagNight
+ENUT Ch1FlagNightDone
+ASMC RefreshPalette
+CAMERA Fey
+ENUN
+MUSC SongTurnaboutAirlinesIntroID
+Text(FeyMarthNight)
+SetChapterSong(SongMoonlightID, SongMoonlightID, SongMoonlightID, $1)
+CALL AskForSave
+LABEL 18
+NoFade
+ENDA
+
+TriggerSecondPartReinforcement:
+ContinueIfFactionMatch(Ally)
+ENUT Ch1FlagTriggerSecondPartReinforcement
+NoFade
+ENDA
+
+MaybeSpawnSecondPartReinforcement:
+CHECK_EVENTID Ch1FlagTriggerSecondPartReinforcement
+BEQ 19 sC s0
+SpawnSecondPartReinforcement:
+LoadReinforcements(SecondPartReinforcement)
+ENUN
+LABEL 19
+NoFade
+ENDA
+
+SpawnPegReinforcement:
+LoadReinforcements(PegsReinforcement)
+ENUN
+NoFade
+ENDA
+
+SpawnFinalHumanReinforcement:
+LoadReinforcements(FinalHumanReinforcement)
+ENUN
+NoFade
+ENDA
+
+SpawnAntiSoftlockReinforcement:
+LoadReinforcements(AntiSoftlockReinforcement)
+ENUN
+NoFade
+ENDA
+
+SpawnZombies1:
+LoadReinforcements(Zombies1Reinforcement)
+ENUN
+NoFade
+ENDA
+
+SpawnZombies2:
+LoadReinforcements(Zombies2Reinforcement)
+ENUN
+NoFade
+ENDA
+
+SpawnZombies3:
+LoadReinforcements(Zombies3Reinforcement)
+ENUN
+NoFade
+ENDA
+
+SpawnZombies12:
+LoadReinforcements(Zombies1Reinforcement)
+ENUN
+LoadReinforcements(Zombies2Reinforcement)
+ENUN
+NoFade
+ENDA
+
+SpawnZombies13:
+LoadReinforcements(Zombies1Reinforcement)
+ENUN
+LoadReinforcements(Zombies3Reinforcement)
+ENUN
+NoFade
+ENDA
+
+SpawnZombies23:
+LoadReinforcements(Zombies2Reinforcement)
+ENUN
+LoadReinforcements(Zombies3Reinforcement)
+ENUN
+NoFade
+ENDA
+
+SpawnZombies123:
+LoadReinforcements(Zombies1Reinforcement)
+ENUN
+LoadReinforcements(Zombies2Reinforcement)
+ENUN
+LoadReinforcements(Zombies3Reinforcement)
+ENUN
+NoFade
+ENDA
+
+
+MikeRecruitFey:
+MUSC SongWithUsID
+Text(TalkFeyMike)
+CUSA Mike
+NoFade
+ENDA
+
+MikeRecruitMila:
+MUSC SongWithUsID
+Text(TalkMiraMike)
+CUSA Mike
+NoFade
+ENDA
+
+MikeRecruitAchilles:
+MUSC SongWithUsID
+Text(TalkAchillesMike)
+CUSA Mike
+NoFade
+ENDA
+
+
+AskForSave:
+EVBIT_MODIFY 0x4
+TUTORIALTEXTBOXSTART
+SVAL 0xB 0xFFFFFFFF
+TEXTSHOW SaveMidMap
+TEXTEND
+REMA
+SVAL 0x7 0x1
+BNE 0x55 0xC 0x7
+ASMC 0xB5D5D
+LABEL 0x55
+EVBIT_MODIFY 0x0
+EVBIT_T 0x7
+NoFade
+ENDA
+
+
+EndingScene:
+// Trigger night just in case
+ENUT Ch1FlagDusk
+ENUT Ch1FlagNight
+//MUSC SongMoonlightID
+// End just in case
+ASMC RefreshPalette
+FADI 15
+ClearAll
+MUSC SongAnotherVictoryID
+LOAD2 0x2 OutroUnits
+CAMERA [23,17]
+SetBackground(0x35) // Black
+FADU 15
+SetBackground(0x20) // TEMP
+Text(Ending1)
+EndConvo
+
+TEXTSTART
+TEXTSHOW Ending2
+TEXTEND
+MUSCSLOW 0x7FFF
+TEXTCONT
+TEXTEND
+MUSC SongElegyOfBattleID
+KILL Flick
+AWAIT_KILL Flick
+TEXTCONT
+TEXTEND
+KILL Mila
+AWAIT_KILL Mila
+TEXTCONT
+TEXTEND
+KILL Klicas
+AWAIT_KILL Klicas
+TEXTCONT
+TEXTEND
+REMA
+
+CHECK_ALIVE Gary
+BEQ 30 sC s0
+//HighlightChar(Gary)
+Text(GaryDeath)
+KILL Gary
+AWAIT_KILL Gary
+LABEL 30
+
+CHECK_ALIVE Nobbit
+BEQ 31 sC s0
+//HighlightChar(Nobbit)
+Text(NobbitDeath)
+KILL Nobbit
+AWAIT_KILL Nobbit
+LABEL 31
+
+CHECK_ALIVE Mike
+BEQ 32 sC s0
+//HighlightChar(Mike)
+Text(MikeDeath)
+KILL Mike
+AWAIT_KILL Mike
+LABEL 32
+
+TEXTSTART
+TEXTSHOW EndingFinale
+TEXTEND
+KILL Achilles
+AWAIT_KILL Achilles
+TEXTCONT
+TEXTEND
+MUSCSLOW 0x7FFF
+TEXTCONT
+TEXTEND
+SOUN 0xD2 // Hit map
+STAL 15
+TEXTCONT
+TEXTEND
+KILL Sol
+AWAIT_KILL Sol
+MUSC SongWhatComesFromDarknessID
+TEXTCONT
+TEXTEND
+REMA
+
+// Fade out
+FADI 2
+SetBackground(0x35) // Black
+FADU 10
+MUSC SongYatagarasuID
+SetBackground(0x0B) // Book
+
+// Endings
+
+STAL 60
+DisplayEndingBasedOnMemory(0x91, EndingIronMemory,		0x40)
+DisplayEndingBasedOnMemory(0x92, EndingSteelMemory,		0x41)
+DisplayEndingBasedOnMemory(0x93, EndingSilverMemory,	0x42)
+DisplayEndingBasedOnMemory(0x94, EndingRangedMemory,	0x43)
+DisplayEndingBasedOnMemory(0x95, EndingKillingMemory,	0x44)
+DisplayEndingBasedOnMemory(0x96, EndingRoyalMemory,		0x45)
+DisplayEndingBasedOnMemory(0x97, EndingBlessedMemory,	0x46)
+DisplayEndingBasedOnMemory(0x98, EndingBrokenMemory,	0x47)
+
+DisplayEndingBasedOnCore(0x04A0, EndingLordCore,		0x48)
+DisplayEndingBasedOnCore(0x08A0, EndingVillagerCore,	0x49)
+DisplayEndingBasedOnCore(0x0AA0, EndingSoldierCore,		0x4A)
+DisplayEndingBasedOnCore(0x0CA0, EndingKnightCore,		0x4B)
+DisplayEndingBasedOnCore(0x0EA0, EndingFighterCore,		0x4C)
+DisplayEndingBasedOnCore(0x10A0, EndingMyrmCore,		0x4D)
+DisplayEndingBasedOnCore(0x12A0, EndingMercCore,		0x4E)
+DisplayEndingBasedOnCore(0x14A0, EndingArcherCore,		0x4F)
+DisplayEndingBasedOnCore(0x16A0, EndingCavCore,			0x50)
+DisplayEndingBasedOnCore(0x18A0, EndingPegCore,			0x51)
+DisplayEndingBasedOnCore(0x1AA0, EndingWyvCore,			0x52)
+DisplayEndingBasedOnCore(0x1CA0, EndingClericCore,		0x53)
+DisplayEndingBasedOnCore(0x1EA0, EndingMageCore,		0x54)
+DisplayEndingBasedOnCore(0x20A0, EndingMonkCore,		0x55)
+DisplayEndingBasedOnCore(0x22A0, EndingShamanCore,		0x56)
+DisplayEndingBasedOnCore(0x24A0, EndingPaladinCore,		0x57)
+DisplayEndingBasedOnCore(0x26A0, EndingGeneralCore,		0x58)
+
+// Zombie ending choice
+HasItemWithDurabilityCheck(Fey, 0x06A0)
+BEQ 0x59 sC s0
+MUSCSLOW 0x7FFF
+CGText(EndingZombieCore)
+MUSC SongWhatComesFromDarknessID
+Text(BadEnding)
+//EndConvo
+MNC2 0x0
+NoFade
+ENDB
+LABEL 0x59
+//EndConvo
+Text(GoodEnding)
+GOTO_TITLE
+NoFade
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET

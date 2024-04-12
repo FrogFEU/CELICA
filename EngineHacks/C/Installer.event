@@ -1,0 +1,32 @@
+
+#include "C_Code.lyn.event"
+
+#include "Trade/Trade.lyn.event" 
+
+#include "Spawn/Spawn.lyn.event"
+
+#include "BrokenWeapons/BrokenWeapons.lyn.event"
+
+#include "GameplayChanges/GameplayChanges.lyn.event"
+
+#include "FixHeal/FixHeal.lyn.event"
+
+#include "Zombification/Zombification.lyn.event"
+
+#include "ItemNameExpansionFix/ItemNameExpansionFix.lyn.event"
+
+#include "DisableBattleAnims/DisableBattleAnims.lyn.event"
+
+#include "FixCGText/FixCGText.lyn.event"
+
+// Custom events
+
+#include "CustomEvents/CustomEvents.lyn.event"
+
+#define SwapItemEvent(Unit, Item, Durability, Slot) "SVAL 1 Unit; SVAL 2 Item; SVAL 3 Durability; SVAL 4 Slot; ASMC SwapItem"
+#define ChangeToGeneralEvent(dummy) "ASMC ChangeToGeneral"
+
+#include "CheckItem/CheckItem.lyn.event"
+
+#define HasItemCheck(Unit, Item) "SVAL 1 Unit; SVAL 2 Item; ASMC HasItem"
+#define HasItemWithDurabilityCheck(Unit, Item) "SVAL 1 Unit; SVAL 2 Item; ASMC HasItemWithDurability"

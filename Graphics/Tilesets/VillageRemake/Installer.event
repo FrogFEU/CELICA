@@ -1,0 +1,38 @@
+
+#define VillageRemakeObjectsID 1
+#define VillageRemakePaletteID 2
+#define VillageRemakeTilesID 3
+#define VillageRemakeAnimationID 5
+
+#define VillageRemakeNightPaletteID 0x4C
+#define VillageRemakeSunsetPaletteID 0x38
+
+#include "AnimationInstaller.event"
+
+ALIGN 4
+VillageRemakeObjects:
+#incbin "dmp/VillageRemake_object.dmp"
+
+ALIGN 4
+VillageRemakeTiles:
+#incbin "dmp/VillageRemake_config.dmp"
+
+ALIGN 4
+VillageRemakePalette:
+#incbin "dmp/VillageRemake_palette.dmp"
+
+ALIGN 4
+VillageRemakeNightPalette:
+#incbin "dmp/VillageRemake_palette_2.dmp"
+
+ALIGN 4
+VillageRemakeSunsetPalette:
+#incbin "dmp/VillageRemake_palette_3.dmp"
+
+EventPointerTable(VillageRemakeObjectsID, VillageRemakeObjects)
+EventPointerTable(VillageRemakePaletteID, VillageRemakePalette)
+EventPointerTable(VillageRemakeTilesID, VillageRemakeTiles)
+
+EventPointerTable(VillageRemakeNightPaletteID, VillageRemakeNightPalette)
+EventPointerTable(VillageRemakeSunsetPaletteID, VillageRemakeSunsetPalette)
+MESSAGE "Tilesets Installed"

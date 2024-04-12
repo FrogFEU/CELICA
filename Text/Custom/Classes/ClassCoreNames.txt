@@ -1,0 +1,57 @@
+## KeeperCoreName
+Great Lord Core[X]
+
+## LordCoreName
+Lord Core[X]
+
+## RevenantCoreName
+Zombie Core[X]
+
+## VillagerCoreName
+Villager Core[X]
+
+## SoldierCoreName
+Soldier Core[X]
+
+## KnightCoreName
+Knight Core[X]
+
+## FighterCoreName
+Fighter Core[X]
+
+## MyrmidonCoreName
+Myrmidon Core[X]
+
+## MercenaryCoreName
+Mercenary Core[X]
+
+## ArcherCoreName
+Archer Core[X]
+
+## CavalierCoreName
+Cavalier Core[X]
+
+## PegasusKnightCoreName
+Pegasus Kn. Core[X]
+
+## WyvernRiderCoreName
+Wyvern Rider Core[X]
+
+## ClericCoreName
+Cleric Core[X]
+
+## MageCoreName
+Mage Core[X]
+
+## MonkCoreName
+Monk Core[X]
+
+## ShamanCoreName
+Shaman Core[X]
+
+## PaladinCoreName
+Paladin Core[X]
+
+## GeneralCoreName
+General Core[X]
+

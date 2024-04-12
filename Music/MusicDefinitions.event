@@ -1,0 +1,16 @@
+#define SongTurnaboutAirlinesIntroID 0x3F // Unit death
+#define SongCrisesOfFateID 0x3 // No idea
+#define SongYatagarasuID 0x4 // No idea
+#define SongWhatComesFromDarknessID 0x5 // No idea
+#define SongHyzantesSchemesID 0x43 // Main theme
+#define SongFE4Conversation1ID 0x6 // No idea
+#define SongElegyOfBattleID 0x3E // Game over
+#define SongOffToWarID 0x7 // No idea
+#define SongWithUsID 0x8 // No idea
+#define SongAnotherVictoryID 0x28 // No idea
+
+#define SongLandOfFrozenForestID 0x9 // Distant Roads
+#define SongCombatAdversityID 0xA // Uh map theme 2
+#define SongMoonlightID 0xB // Uh map theme 3
+#define SongOnsetID 0x11 // Enemy theme 1
+#define SongSortieFormationID 0x12 // Enemy theme 2

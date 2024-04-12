@@ -1,0 +1,10 @@
+
+PUSH
+ORG $9ED674
+BYTE Mila
+BYTE Achilles
+BYTE Klicas
+BYTE Flick
+BYTE 00
+ALIGN 4
+POP

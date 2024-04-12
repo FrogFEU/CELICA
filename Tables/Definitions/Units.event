@@ -1,0 +1,27 @@
+// Units
+#define KeeperUnitID 1
+#define Fey 1 // AKA Keeper
+#define Mila 2
+#define Achilles 3
+#define Klicas 4
+#define Flick 5
+#define Gary 6
+#define Nobbit 7
+#define Mike 8
+#define Sol 0x68
+#define Morbius 0x69
+
+#define M10HP 0x80
+#define F10HP 0x81
+#define M8HP  0x82
+#define F8HP  0x83
+#define M15HP 0x84
+#define F15HP 0x85
+#define M12HP 0x86
+#define F12HP 0x87
+#define Minion8HP 0x88
+
+// Classes
+
+// Items
+#define ClassCoreItemID 0xA0

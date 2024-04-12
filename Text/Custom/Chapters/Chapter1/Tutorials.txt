@@ -1,0 +1,38 @@
+## ReshapeTutorial
+Fey can [Red]reshape[Red] adjacent units,[N]
+[Red]both allies and enemies[Red].[AN]
+Reshaping allows you to trade a unit's[N]
+[Red]weapon[Red] or [Red]class[Red] with one in Fey's inventory.[AN]
+Classes affect [Red]movement[Red], [Red]stat bonuses[Red],[N]
+[Red]weaknesses[Red] and the unit's [Red]weapon type[Red].[6.][N]
+Weapons will [Red]automatically change[Red] to[N]
+match the new class.[AN]
+You can Reshape [Red]any number of times[N]
+without moving[Red], Thracia-style.[AN]
+[Red]Fey is the only Game Over unit[Red].[A][X]
+
+## TutorialSol
+Your goal is to defeat Sol.[6.][N]
+Bosses cannot be reshaped.[A][X]
+
+## TutorialHouses
+Houses give 15 exp.[6.] Villages grant[N]
+various rewards.[A][X]
+
+## TutorialGameplay
+[Red]Important gameplay changes[Red]:[N]
+-Doubling threshold is one.[6.][N]
+-Minimum damage is one.[6.][N]
+-Con is gone.[6.][AN]
+-Effective attacks deal +5 [Red]final[Red] damage.[4.][N]
+-Infantry have shove and mounts canto.[A][X]
+
+## TutorialMikeArrive
+Mike the allied paladin will[N]
+arrive from here in 2 turns.[A][X]
+
+## TutorialZombieArrive
+Mordred will summon a zombie[N]
+to attack houses in 2 turns.[AN]
+Zombies can inflict [Red]Infect[Red],[N]
+turning the target into a zombie.[A][X]

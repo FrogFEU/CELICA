@@ -1,0 +1,31 @@
+//these all get installed in stat getter loops
+
+ALIGN 4
+prAddClassStatsStr:
+#incbin "AddClassStats.dmp"
+BYTE 0x1
+
+ALIGN 4
+prAddClassStatsMag:
+#incbin "AddClassStats.dmp"
+BYTE 0x6
+
+ALIGN 4
+prAddClassStatsSkl:
+#incbin "AddClassStats.dmp"
+BYTE 0x2
+
+ALIGN 4
+prAddClassStatsSpd:
+#incbin "AddClassStats.dmp"
+BYTE 0x3
+
+ALIGN 4
+prAddClassStatsDef:
+#incbin "AddClassStats.dmp"
+BYTE 0x4
+
+ALIGN 4
+prAddClassStatsRes:
+#incbin "AddClassStats.dmp"
+BYTE 0x5

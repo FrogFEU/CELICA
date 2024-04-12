@@ -1,0 +1,76 @@
+## KeeperDesc
+A Chosen One, capable of reshaping[NL]
+those around them with a touch.[X]
+
+## LordDesc
+Noble heirs to a ruling house who[NL]
+possess great potential. Equip: [anima].[.][X]
+
+## RevenantDesc
+Walking corpses that move slowly[NL]
+but attack with sharp claws.[X]
+
+## VillagerDesc
+An ordinary villager.[NL]
+Not very powerful. Equip: [sword].[.][X]
+
+## SoldierDesc
+Average soldiers possessing no[.][NL]
+special abilities. Equip: [lance].[.][X]
+
+## KnightDesc
+Heavily armored knights with poor[.][NL]
+movement. Equip: [lance].[X]
+
+## FighterDesc
+Ruffians with great strength but[NL]
+poor defense. Equip: [axe].[X]
+
+## MyrmidonDesc
+Talented swordsmen skilled in swift[.][NL]
+killing strokes. Equip: [sword].[.][X]
+
+## MercenaryDesc
+Well-balanced professional soldiers-[NL]
+for-hire. Equip: [sword].[X]
+
+## ArcherDesc
+Warriors who use bows to attack from[NL]
+afar. Equip: [bow].[X]
+
+## CavalierDesc
+Mounted knights with swift movement.[NL]
+Equip: [sword].[X]
+
+## PegasusKnightDesc
+Airborne knights who resist magic but[.][NL]
+are weak against bows. Equip: [lance].[.][X]
+
+## WyvernRiderDesc
+High-flying knights vulnerable only to[NL]
+bows and magic. Equip: [lance].[X]
+
+## ClericDesc
+Holy women who use sacred staves to[.][NL]
+heal their allies. Equip: [staff].[.][X]
+
+## MageDesc
+Magic wielders with solid skills but low[NL]
+physical strength. Equip: [anima].[X]
+
+## MonkDesc
+Users of light magic with high[NL]
+resistance. Equip: [light].[.][X]
+
+## ShamanDesc
+Wielders of magic who are stronger,[.][NL]
+but slower, than mages. Equip: [dark].[X]
+
+## PaladinDesc
+Mounted knights with superior[.][NL]
+abilities. Equip: [sword].[.][X]
+
+## GeneralDesc
+An honorific bestowed upon[NL]
+seasoned knights. Equip: [lance].[X]
+

@@ -1,0 +1,11 @@
+#define ConvoBackgroundTable 0x95DD1C //Vanilla table
+
+#define SetConvoBackground(Index, ImagePointer, TSAPointer, PalettePointer) "PUSH; ORG ConvoBackgroundTable + (Index * 0xC); POIN ImagePointer TSAPointer PalettePointer; POP"
+
+// Installers
+#include "Sprites/TheBookInstaller.event"
+#include "Sprites/EarthInstaller.event"
+
+//Let's replace Woodland since it's used in the prologue of vanilla
+SetConvoBackground(0x0A, TheBookImage, TheBookTSA, TheBookPalette)
+SetConvoBackground(0x0B, EarthImage, EarthTSA, EarthPalette)

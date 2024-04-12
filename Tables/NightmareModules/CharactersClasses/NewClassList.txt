@@ -1,0 +1,19 @@
+0x02/03 - Keeper
+0x04/05 - Lord
+0x06/07 - Revenant
+0x08/09 - Villager
+0x0a/0b - Soldier
+0x0c/0d - Knight
+0x0e/0f - Fighter
+0x10/11 - Myrmidon
+0x12/13 - Mercenary
+0x14/15 - Archer
+0x16/17 - Cavalier
+0x18/19 - Pegasus Knight
+0x1a/1b - Wyvern Rider
+0x1c/1d - Cleric
+0x1e/1f - Mage
+0x20/21 - Monk
+0x22/23 - Shaman
+0x24/25 - Paladin
+0x26/27 - General

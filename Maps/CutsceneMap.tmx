@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="1">
+ <properties>
+  <property name="Main" value=""/>
+ </properties>
+ <tileset firstgid="1" name="Village2" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="Village2.png" width="512" height="512"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="15" height="10">
+  <properties>
+   <property name="Anims1" value="5"/>
+   <property name="Anims2" value="0"/>
+   <property name="ChapterID" value="1"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="9"/>
+   <property name="MapID" value="14"/>
+   <property name="ObjectType" value="1"/>
+   <property name="PaletteID" value="2"/>
+   <property name="TileConfig" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxlkbEOAUEQhmf3Cg0lLyBR4w3Em5x7kaNSeAhHFKLDA5AoiMQz3IlOoqT0T/a/7DrFn9mZ+7+Z2b3CiBRQZEXmIvIxLh6pJuo71PasG+v8JaNKyal/Ct2ga9Cj7HMgb62rbcG0rOcayF+ID6iH80X8Lm/21x7KDJCPWGsjrunbcI6eZ8F85dviuBiaGP8tZaxHIjnzrvnfP7GeK8TPUfWNqxUVNqFPuTzw1+gvZ+v9T9Aq8OiuQ/Yai+NVd3Fvo/Uz1IHnKX6vOe8YB3tklf9RVc631l1Tsjo/gxbsszS/+2cBu2Sek/8CR8pcEw==
+  </data>
+ </layer>
+</map>

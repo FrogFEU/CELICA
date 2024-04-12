@@ -1,0 +1,51 @@
+
+
+    #include "MPlayDef.event"
+
+    #define    loop_sfx_grp_IconoclastsMoonlight  IconoclastsMoonlight_map
+    #define    loop_sfx_pri_IconoclastsMoonlight  0
+    #define    loop_sfx_rev_IconoclastsMoonlight  0
+    #define    loop_sfx_mvl_IconoclastsMoonlight  127
+    #define    loop_sfx_key_IconoclastsMoonlight  0
+    #define    loop_sfx_tbs_IconoclastsMoonlight  1
+    #define    loop_sfx_exg_IconoclastsMoonlight  0
+    #define    loop_sfx_cmp_IconoclastsMoonlight  1
+
+    ALIGN 4
+
+loop_sfx_1:
+    BYTE        VOL     255*loop_sfx_mvl_IconoclastsMoonlight/mxv
+    BYTE    KEYSH   loop_sfx_key_IconoclastsMoonlight+0
+    BYTE        VOICE   0
+    BYTE        TIE     Cn3   v064
+    BYTE    W96
+loop_sfx_1_B1:
+    BYTE    W96
+    BYTE    W96
+    BYTE    GoTo
+     POIN2    loop_sfx_1_B1
+loop_sfx_1_B2:
+    BYTE    W06
+    BYTE        EOT     Cn3 
+    BYTE    FINE
+
+    ALIGN 4
+
+IconoclastsMoonlight:
+    BYTE    1    // NumTrks
+    BYTE    0    // NumBlks
+    BYTE    loop_sfx_pri_IconoclastsMoonlight    // Priority
+    BYTE    loop_sfx_rev_IconoclastsMoonlight    // Reverb.
+
+    POIN2    loop_sfx_grp_IconoclastsMoonlight
+
+    POIN2    loop_sfx_1
+
+    
+IconoclastsMoonlight_map:
+WORD $3c00
+POIN IconoclastsMoonlight_wav
+WORD $FF00FF
+
+IconoclastsMoonlight_wav:
+#incbin "IconoclastsMoonlight2.bin"

@@ -1,0 +1,419 @@
+//Generated - do not edit
+//Copy paste the /* */ section into your definitions if desired.
+//Please copy the SetSMS and SetMMS section to change SMS size and MMS AP. 
+ 
+ 
+ 
+/* 
+//First free SMS is 107
+#define ArcherFS 107 
+#define ArcherMS 108 
+#define CavalierFS 109 
+#define CavalierMS 110 
+#define ClericFS 111 
+#define ClericMS 112 
+#define FighterFS 113 
+#define FighterMS 114 
+#define GeneralUS 115 
+#define KeeperUS 116 
+#define KnightUS 117 
+#define LordFS 118 
+#define LordMS 119 
+#define MageFS 120 
+#define MageMS 121 
+#define MercenaryFS 122 
+#define MercenaryMS 123 
+#define MonkFS 124 
+#define MonkMS 125 
+#define MyrmidonFS 126 
+#define MyrmidonMS 127 
+#define PaladinFS 128 
+#define PaladinMS 129 
+#define PegasusKnightUS 130 
+#define RevenantUS 131 
+#define ShamanFS 132 
+#define ShamanMS 133 
+#define SoldierFS 134 
+#define SoldierMS 135 
+#define VillagerFS 136 
+#define VillagerMS 137 
+#define WyvernRiderUS 138 
+ 
+ 
+//First free MMS is 127 and will show up if you've expanded classes.
+#define ArcherFM 127 
+#define ArcherMM 128 
+#define CavalierFM 129 
+#define CavalierMM 130 
+#define ClericFM 131 
+#define ClericMM 132 
+#define FighterFM 133 
+#define FighterMM 134 
+#define GeneralUM 135 
+#define KeeperUM 136 
+#define KnightUM 137 
+#define LordFM 138 
+#define LordMM 139 
+#define MageFM 140 
+#define MageMM 141 
+#define MercenaryFM 142 
+#define MercenaryMM 143 
+#define MonkFM 144 
+#define MonkMM 145 
+#define MyrmidonFM 146 
+#define MyrmidonMM 147 
+#define PaladinFM 148 
+#define PaladinMM 149 
+#define PegasusKnightUM 150 
+#define RevenantUM 151 
+#define ShamanFM 152 
+#define ShamanMM 153 
+#define SoldierFM 154 
+#define SoldierMM 155 
+#define VillagerFM 156 
+#define VillagerMM 157 
+#define WyvernRiderUM 158 
+ 
+*/ 
+ 
+ 
+ 
+/* 
+//Copy from here 
+PUSH 
+ 
+SetSMS(ArcherFS, 1, ArcherFS_Data) 
+SetSMS(ArcherMS, 1, ArcherMS_Data) 
+SetSMS(CavalierFS, 1, CavalierFS_Data) 
+SetSMS(CavalierMS, 1, CavalierMS_Data) 
+SetSMS(ClericFS, 1, ClericFS_Data) 
+SetSMS(ClericMS, 1, ClericMS_Data) 
+SetSMS(FighterFS, 1, FighterFS_Data) 
+SetSMS(FighterMS, 1, FighterMS_Data) 
+SetSMS(GeneralUS, 1, GeneralUS_Data) 
+SetSMS(KeeperUS, 1, KeeperUS_Data) 
+SetSMS(KnightUS, 1, KnightUS_Data) 
+SetSMS(LordFS, 1, LordFS_Data) 
+SetSMS(LordMS, 1, LordMS_Data) 
+SetSMS(MageFS, 1, MageFS_Data) 
+SetSMS(MageMS, 1, MageMS_Data) 
+SetSMS(MercenaryFS, 1, MercenaryFS_Data) 
+SetSMS(MercenaryMS, 1, MercenaryMS_Data) 
+SetSMS(MonkFS, 1, MonkFS_Data) 
+SetSMS(MonkMS, 1, MonkMS_Data) 
+SetSMS(MyrmidonFS, 1, MyrmidonFS_Data) 
+SetSMS(MyrmidonMS, 1, MyrmidonMS_Data) 
+SetSMS(PaladinFS, 1, PaladinFS_Data) 
+SetSMS(PaladinMS, 1, PaladinMS_Data) 
+SetSMS(PegasusKnightUS, 1, PegasusKnightUS_Data) 
+SetSMS(RevenantUS, 1, RevenantUS_Data) 
+SetSMS(ShamanFS, 1, ShamanFS_Data) 
+SetSMS(ShamanMS, 1, ShamanMS_Data) 
+SetSMS(SoldierFS, 1, SoldierFS_Data) 
+SetSMS(SoldierMS, 1, SoldierMS_Data) 
+SetSMS(VillagerFS, 1, VillagerFS_Data) 
+SetSMS(VillagerMS, 1, VillagerMS_Data) 
+SetSMS(WyvernRiderUS, 1, WyvernRiderUS_Data) 
+ 
+ 
+SetMMS(ArcherFM, ArcherFM_Data, DemonKingAP) 
+SetMMS(ArcherMM, ArcherMM_Data, DemonKingAP) 
+SetMMS(CavalierFM, CavalierFM_Data, DemonKingAP) 
+SetMMS(CavalierMM, CavalierMM_Data, DemonKingAP) 
+SetMMS(ClericFM, ClericFM_Data, DemonKingAP) 
+SetMMS(ClericMM, ClericMM_Data, DemonKingAP) 
+SetMMS(FighterFM, FighterFM_Data, DemonKingAP) 
+SetMMS(FighterMM, FighterMM_Data, DemonKingAP) 
+SetMMS(GeneralUM, GeneralUM_Data, DemonKingAP) 
+SetMMS(KeeperUM, KeeperUM_Data, DemonKingAP) 
+SetMMS(KnightUM, KnightUM_Data, DemonKingAP) 
+SetMMS(LordFM, LordFM_Data, DemonKingAP) 
+SetMMS(LordMM, LordMM_Data, DemonKingAP) 
+SetMMS(MageFM, MageFM_Data, DemonKingAP) 
+SetMMS(MageMM, MageMM_Data, DemonKingAP) 
+SetMMS(MercenaryFM, MercenaryFM_Data, DemonKingAP) 
+SetMMS(MercenaryMM, MercenaryMM_Data, DemonKingAP) 
+SetMMS(MonkFM, MonkFM_Data, DemonKingAP) 
+SetMMS(MonkMM, MonkMM_Data, DemonKingAP) 
+SetMMS(MyrmidonFM, MyrmidonFM_Data, DemonKingAP) 
+SetMMS(MyrmidonMM, MyrmidonMM_Data, DemonKingAP) 
+SetMMS(PaladinFM, PaladinFM_Data, DemonKingAP) 
+SetMMS(PaladinMM, PaladinMM_Data, DemonKingAP) 
+SetMMS(PegasusKnightUM, PegasusKnightUM_Data, DemonKingAP) 
+SetMMS(RevenantUM, RevenantUM_Data, DemonKingAP) 
+SetMMS(ShamanFM, ShamanFM_Data, DemonKingAP) 
+SetMMS(ShamanMM, ShamanMM_Data, DemonKingAP) 
+SetMMS(SoldierFM, SoldierFM_Data, DemonKingAP) 
+SetMMS(SoldierMM, SoldierMM_Data, DemonKingAP) 
+SetMMS(VillagerFM, VillagerFM_Data, DemonKingAP) 
+SetMMS(VillagerMM, VillagerMM_Data, DemonKingAP) 
+SetMMS(WyvernRiderUM, WyvernRiderUM_Data, DemonKingAP) 
+ 
+POP 
+//Copy until here 
+*/ 
+ 
+ 
+//SMS Image Data 
+ 
+ALIGN 4 
+ArcherFS_Data: 
+#incbin "dmp/ArcherFS.dmp" 
+ 
+ALIGN 4 
+ArcherMS_Data: 
+#incbin "dmp/ArcherMS.dmp" 
+ 
+ALIGN 4 
+CavalierFS_Data: 
+#incbin "dmp/CavalierFS.dmp" 
+ 
+ALIGN 4 
+CavalierMS_Data: 
+#incbin "dmp/CavalierMS.dmp" 
+ 
+ALIGN 4 
+ClericFS_Data: 
+#incbin "dmp/ClericFS.dmp" 
+ 
+ALIGN 4 
+ClericMS_Data: 
+#incbin "dmp/ClericMS.dmp" 
+ 
+ALIGN 4 
+FighterFS_Data: 
+#incbin "dmp/FighterFS.dmp" 
+ 
+ALIGN 4 
+FighterMS_Data: 
+#incbin "dmp/FighterMS.dmp" 
+ 
+ALIGN 4 
+GeneralUS_Data: 
+#incbin "dmp/GeneralUS.dmp" 
+ 
+ALIGN 4 
+KeeperUS_Data: 
+#incbin "dmp/KeeperUS.dmp" 
+ 
+ALIGN 4 
+KnightUS_Data: 
+#incbin "dmp/KnightUS.dmp" 
+ 
+ALIGN 4 
+LordFS_Data: 
+#incbin "dmp/LordFS.dmp" 
+ 
+ALIGN 4 
+LordMS_Data: 
+#incbin "dmp/LordMS.dmp" 
+ 
+ALIGN 4 
+MageFS_Data: 
+#incbin "dmp/MageFS.dmp" 
+ 
+ALIGN 4 
+MageMS_Data: 
+#incbin "dmp/MageMS.dmp" 
+ 
+ALIGN 4 
+MercenaryFS_Data: 
+#incbin "dmp/MercenaryFS.dmp" 
+ 
+ALIGN 4 
+MercenaryMS_Data: 
+#incbin "dmp/MercenaryMS.dmp" 
+ 
+ALIGN 4 
+MonkFS_Data: 
+#incbin "dmp/MonkFS.dmp" 
+ 
+ALIGN 4 
+MonkMS_Data: 
+#incbin "dmp/MonkMS.dmp" 
+ 
+ALIGN 4 
+MyrmidonFS_Data: 
+#incbin "dmp/MyrmidonFS.dmp" 
+ 
+ALIGN 4 
+MyrmidonMS_Data: 
+#incbin "dmp/MyrmidonMS.dmp" 
+ 
+ALIGN 4 
+PaladinFS_Data: 
+#incbin "dmp/PaladinFS.dmp" 
+ 
+ALIGN 4 
+PaladinMS_Data: 
+#incbin "dmp/PaladinMS.dmp" 
+ 
+ALIGN 4 
+PegasusKnightUS_Data: 
+#incbin "dmp/PegasusKnightUS.dmp" 
+ 
+ALIGN 4 
+RevenantUS_Data: 
+#incbin "dmp/RevenantUS.dmp" 
+ 
+ALIGN 4 
+ShamanFS_Data: 
+#incbin "dmp/ShamanFS.dmp" 
+ 
+ALIGN 4 
+ShamanMS_Data: 
+#incbin "dmp/ShamanMS.dmp" 
+ 
+ALIGN 4 
+SoldierFS_Data: 
+#incbin "dmp/SoldierFS.dmp" 
+ 
+ALIGN 4 
+SoldierMS_Data: 
+#incbin "dmp/SoldierMS.dmp" 
+ 
+ALIGN 4 
+VillagerFS_Data: 
+#incbin "dmp/VillagerFS.dmp" 
+ 
+ALIGN 4 
+VillagerMS_Data: 
+#incbin "dmp/VillagerMS.dmp" 
+ 
+ALIGN 4 
+WyvernRiderUS_Data: 
+#incbin "dmp/WyvernRiderUS.dmp" 
+ 
+ 
+ 
+ 
+//MMS Image Data 
+ 
+ALIGN 4 
+ArcherFM_Data: 
+#incbin "dmp/ArcherFM.dmp" 
+ 
+ALIGN 4 
+ArcherMM_Data: 
+#incbin "dmp/ArcherMM.dmp" 
+ 
+ALIGN 4 
+CavalierFM_Data: 
+#incbin "dmp/CavalierFM.dmp" 
+ 
+ALIGN 4 
+CavalierMM_Data: 
+#incbin "dmp/CavalierMM.dmp" 
+ 
+ALIGN 4 
+ClericFM_Data: 
+#incbin "dmp/ClericFM.dmp" 
+ 
+ALIGN 4 
+ClericMM_Data: 
+#incbin "dmp/ClericMM.dmp" 
+ 
+ALIGN 4 
+FighterFM_Data: 
+#incbin "dmp/FighterFM.dmp" 
+ 
+ALIGN 4 
+FighterMM_Data: 
+#incbin "dmp/FighterMM.dmp" 
+ 
+ALIGN 4 
+GeneralUM_Data: 
+#incbin "dmp/GeneralUM.dmp" 
+ 
+ALIGN 4 
+KeeperUM_Data: 
+#incbin "dmp/KeeperUM.dmp" 
+ 
+ALIGN 4 
+KnightUM_Data: 
+#incbin "dmp/KnightUM.dmp" 
+ 
+ALIGN 4 
+LordFM_Data: 
+#incbin "dmp/LordFM.dmp" 
+ 
+ALIGN 4 
+LordMM_Data: 
+#incbin "dmp/LordMM.dmp" 
+ 
+ALIGN 4 
+MageFM_Data: 
+#incbin "dmp/MageFM.dmp" 
+ 
+ALIGN 4 
+MageMM_Data: 
+#incbin "dmp/MageMM.dmp" 
+ 
+ALIGN 4 
+MercenaryFM_Data: 
+#incbin "dmp/MercenaryFM.dmp" 
+ 
+ALIGN 4 
+MercenaryMM_Data: 
+#incbin "dmp/MercenaryMM.dmp" 
+ 
+ALIGN 4 
+MonkFM_Data: 
+#incbin "dmp/MonkFM.dmp" 
+ 
+ALIGN 4 
+MonkMM_Data: 
+#incbin "dmp/MonkMM.dmp" 
+ 
+ALIGN 4 
+MyrmidonFM_Data: 
+#incbin "dmp/MyrmidonFM.dmp" 
+ 
+ALIGN 4 
+MyrmidonMM_Data: 
+#incbin "dmp/MyrmidonMM.dmp" 
+ 
+ALIGN 4 
+PaladinFM_Data: 
+#incbin "dmp/PaladinFM.dmp" 
+ 
+ALIGN 4 
+PaladinMM_Data: 
+#incbin "dmp/PaladinMM.dmp" 
+ 
+ALIGN 4 
+PegasusKnightUM_Data: 
+#incbin "dmp/PegasusKnightUM.dmp" 
+ 
+ALIGN 4 
+RevenantUM_Data: 
+#incbin "dmp/RevenantUM.dmp" 
+ 
+ALIGN 4 
+ShamanFM_Data: 
+#incbin "dmp/ShamanFM.dmp" 
+ 
+ALIGN 4 
+ShamanMM_Data: 
+#incbin "dmp/ShamanMM.dmp" 
+ 
+ALIGN 4 
+SoldierFM_Data: 
+#incbin "dmp/SoldierFM.dmp" 
+ 
+ALIGN 4 
+SoldierMM_Data: 
+#incbin "dmp/SoldierMM.dmp" 
+ 
+ALIGN 4 
+VillagerFM_Data: 
+#incbin "dmp/VillagerFM.dmp" 
+ 
+ALIGN 4 
+VillagerMM_Data: 
+#incbin "dmp/VillagerMM.dmp" 
+ 
+ALIGN 4 
+WyvernRiderUM_Data: 
+#incbin "dmp/WyvernRiderUM.dmp" 
+ 
